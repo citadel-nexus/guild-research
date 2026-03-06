@@ -88,10 +88,10 @@ npm run dev
 ## Environment Variables
 
 ```
-NATS_URL=nats://147.93.43.117:4222
+NATS_URL=nats://<your-nats-host>:4222
 SUPABASE_SERVICE_ROLE_KEY=<key>
 NOTION_API_TOKEN=<key>
-NOTION_DB_ID=71028a41-aa4d-434a-ac5c-93e12956f0fe
+NOTION_DB_ID=<your-college-db-id>
 GITLAB_PAT=<token>
 GUILD_PORT=8200
 ```
