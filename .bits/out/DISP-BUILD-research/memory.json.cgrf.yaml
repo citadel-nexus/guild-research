@@ -1,0 +1,29 @@
+# File: .bits/out/DISP-BUILD-research/memory.json.cgrf.yaml
+# Stage: 11_COMMIT
+# SRS: SRS-CN-RESEARCH-BUILD-001
+# CAPS: pending
+# CK: pending
+# Dispatch: DISP-BUILD-research
+# Seat: BITS-CODEGEN
+# Owner: Citadel Nexus Inc.
+# Created: 2026-10-20
+# Depends: .bits/out/DISP-BUILD-research/memory.json
+# EnumType: ConfigDoc
+# EnumEdges: DEPENDS_ON .bits/out/DISP-BUILD-research/memory.json
+# DAG Node: none
+# Intent: Describe the build-dispatch JSON memory payload without invalid JSON comments.
+
+File: .bits/out/DISP-BUILD-research/memory.json
+Stage: 11_COMMIT
+SRS: SRS-CN-RESEARCH-BUILD-001
+CAPS: pending
+CK: pending
+Dispatch: DISP-BUILD-research
+Seat: BITS-CODEGEN
+Owner: Citadel Nexus Inc.
+Created: '2026-10-20'
+Depends: .bits/out/DISP-BUILD-research/report.md
+EnumType: ConfigDoc
+EnumEdges: DEPENDS_ON .bits/out/DISP-BUILD-research/report.md
+DAG Node: none
+Intent: Preserve build-repair file intent, dependencies and verified test outcomes for dispatch ingestion.

@@ -1,3 +1,20 @@
+<!--
+# File: README.md
+# Stage: 06_PLAN
+# SRS: SRS-CN-RESEARCH-BUILD-001
+# CAPS: pending
+# CK: pending
+# Dispatch: DISP-BUILD-research
+# Seat: BITS-CODEGEN
+# Owner: Citadel Nexus Inc.
+# Created: 2026-10-20
+# Depends: .github/BUILD.md
+# EnumType: Doc
+# EnumEdges: DEPENDS_ON .github/BUILD.md
+# DAG Node: none
+# Intent: Document build gates and dependency recovery before starting the real Research SDK.
+-->
+
 # Guild: Research
 
 > *"Knowledge is the only resource that compounds without limit."*
@@ -147,11 +164,17 @@ See [guild-sdk](https://github.com/citadel-nexus/guild-sdk) for the format.
 ## Getting Started
 
 ```bash
-npm install
+nvm use
+npm ci  # Requires the real dependency lockfile; see .github/BUILD.md.
 cp .env.example .env
 # Fill NOTION_API_TOKEN, SUPABASE_SERVICE_ROLE_KEY, GITLAB_PAT
 npm run dev
 ```
+
+Build setup, dependency-access blockers, test coverage and recovery commands are
+in [the build guide](.github/BUILD.md). Before development, run `npm run lint`,
+`npm run typecheck`, `npm test` and `npm run build`. Only use explicitly authorized
+staging configuration when starting the SDK; tests do not contact live services.
 
 ## Environment Variables
 

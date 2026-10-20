@@ -1,0 +1,23 @@
+# File: .dockerignore
+# Stage: 11_COMMIT
+# SRS: SRS-CN-RESEARCH-BUILD-001
+# CAPS: pending
+# CK: pending
+# Dispatch: DISP-BUILD-research
+# Seat: BITS-CODEGEN
+# Owner: Citadel Nexus Inc.
+# Created: 2026-10-20
+# Depends: docker/Dockerfile
+# EnumType: ConfigDoc
+# EnumEdges: DEPENDS_ON docker/Dockerfile
+# DAG Node: none
+# Intent: Prevent local dependency trees and environment files from entering Docker builds.
+
+node_modules
+dist
+coverage
+.git
+.bits
+.codex
+.env
+.env.*

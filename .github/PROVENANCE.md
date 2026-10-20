@@ -1,26 +1,24 @@
 <!--
-# ─── CGRF Header ───────────────────────────────────────────────
-# File:        .github/PROVENANCE.md
-# Stage:       06_PLAN
-# SRS:         SRS-CN-RESEARCH-GOVERNANCE-001
-# CAPS:        pending
-# CK:          pending
-# Dispatch:    DISP-GOVERNANCE-research
-# Seat:        BITS-CODEGEN
-# Owner:       Citadel Nexus Inc.
-# Created:     2026-10-20
-# Depends:     .github/workflows/build-provenance.yml
-# EnumType:    Doc
-# EnumEdges:   DEPENDS_ON .github/workflows/build-provenance.yml
-# DAG Node:    none
-# Intent:      Let consumers verify archive integrity and trusted build identity before use.
-# ───────────────────────────────────────────────────────────────
+# File: .github/PROVENANCE.md
+# Stage: 06_PLAN
+# SRS: SRS-CN-RESEARCH-BUILD-001
+# CAPS: pending
+# CK: pending
+# Dispatch: DISP-BUILD-research
+# Seat: BITS-CODEGEN
+# Owner: Citadel Nexus Inc.
+# Created: 2026-10-20
+# Depends: .github/workflows/build-provenance.yml, .github/BUILD.md
+# EnumType: Doc
+# EnumEdges: DEPENDS_ON .github/workflows/build-provenance.yml; DEPENDS_ON .github/BUILD.md
+# DAG Node: none
+# Intent: Verify signed archives that include compiled output and its dependency lockfile.
 -->
 
 # Signed Research build provenance
 
-`Build provenance` builds with `npm ci`, lint, tests and TypeScript compilation.
-It archives `dist/` and `package.json` as `research-build-<full-commit-sha>.tar.gz`.
+`Build provenance` builds with `npm ci`, lint, typechecking, tests and TypeScript compilation.
+It archives `dist/`, `package.json` and `package-lock.json` as `research-build-<full-commit-sha>.tar.gz`.
 The archive is compiled output, not a deployable image or dependency bundle;
 consumers must supply runtime dependencies separately. Missing build inputs or
 an empty/missing `dist/index.js` fail the build. No source-only fallback is used.
@@ -42,6 +40,7 @@ No certified SLSA level is claimed by this workflow alone.
 The job verifies the result before uploading `signed-research-build-<sha>`, which
 contains the exact archive and `provenance.sigstore.json`. Download and retain
 both: Actions artifacts expire after 30 days (unsigned build intermediates: 14).
+See [BUILD.md](BUILD.md) for the dependency-locking blocker and repair evidence.
 No live attestation exists until the scaffold prerequisites are repaired and a
 trusted main run completes. Existing npm and container outputs are not covered.
 

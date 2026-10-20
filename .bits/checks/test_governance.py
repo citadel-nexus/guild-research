@@ -1,19 +1,17 @@
-# ─── CGRF Header ───────────────────────────────────────────────
-# File:        .bits/checks/test_governance.py
-# Stage:       11_COMMIT
-# SRS:         SRS-CN-RESEARCH-GOVERNANCE-001
-# CAPS:        pending
-# CK:          pending
-# Dispatch:    DISP-GOVERNANCE-research
-# Seat:        BITS-CODEGEN
-# Owner:       Citadel Nexus Inc.
-# Created:     2026-10-20
-# Depends:     .github/workflows/build-provenance.yml, .github/CODEOWNERS, .bits/srs_registry.yml
-# EnumType:    Test
-# EnumEdges:   DEPENDS_ON .github/workflows/build-provenance.yml; DEPENDS_ON .github/CODEOWNERS; DEPENDS_ON .bits/srs_registry.yml
-# DAG Node:    none
-# Intent:      Check owner coverage and prevent PR or cross-run artifact signing regressions.
-# ───────────────────────────────────────────────────────────────
+# File: .bits/checks/test_governance.py
+# Stage: 11_COMMIT
+# SRS: SRS-CN-RESEARCH-BUILD-001
+# CAPS: pending
+# CK: pending
+# Dispatch: DISP-BUILD-research
+# Seat: BITS-CODEGEN
+# Owner: Citadel Nexus Inc.
+# Created: 2026-10-20
+# Depends: .github/workflows/build-provenance.yml, .github/CODEOWNERS, .bits/srs_registry.yml
+# EnumType: Test
+# EnumEdges: DEPENDS_ON .github/workflows/build-provenance.yml; DEPENDS_ON .github/CODEOWNERS; DEPENDS_ON .bits/srs_registry.yml
+# DAG Node: none
+# Intent: Retain signing trust-boundary checks while requiring typechecking and lockfile packaging.
 
 """Validate governance prerequisites and the signing workflow's trust boundary."""
 
@@ -95,6 +93,7 @@ class ProvenanceTests(unittest.TestCase):
             folder = Path(directory)
             env = {**os.environ, "ARTIFACT_NAME": "fixture.tar.gz"}
             (folder / "package.json").write_text('{"name":"archive-test-fixture"}')
+            (folder / "package-lock.json").write_text('{"lockfileVersion":3}')
             missing = subprocess.run(["bash", "-e", "-o", "pipefail", "-c", command],
                                      cwd=folder, env=env, capture_output=True)
             self.assertNotEqual(missing.returncode, 0)
@@ -105,7 +104,7 @@ class ProvenanceTests(unittest.TestCase):
                                    cwd=folder, env=env, capture_output=True)
             self.assertEqual(built.returncode, 0, built.stderr.decode())
             with tarfile.open(folder / "artifact/fixture.tar.gz") as archive:
-                self.assertEqual(set(archive.getnames()), {"package.json", "dist", "dist/index.js"})
+                self.assertEqual(set(archive.getnames()), {"package.json", "package-lock.json", "dist", "dist/index.js"})
 
     def test_pr_jobs_have_no_signing_permissions(self) -> None:
         """Prevent signing privileges from leaking into repository build execution."""
@@ -178,10 +177,10 @@ class ProvenanceTests(unittest.TestCase):
         """Reject source-only or empty artifacts and build failures hidden by fallback."""
         steps = load_workflow()["jobs"]["build"]["steps"]
         commands = [step["run"] for step in steps if "run" in step]
-        self.assertEqual(commands[1:5], ["npm ci", "npm run lint", "npm test", "npm run build"])
+        self.assertEqual(commands[1:6], ["npm ci", "npm run lint", "npm run typecheck", "npm test", "npm run build"])
         self.assertIn("package-lock.json", commands[0])
-        self.assertIn("test -s dist/index.js", commands[5])
-        self.assertIn('tar -czf "artifact/$ARTIFACT_NAME" package.json dist', commands[5])
+        self.assertIn("test -s dist/index.js", commands[6])
+        self.assertIn('tar -czf "artifact/$ARTIFACT_NAME" package.json package-lock.json dist', commands[6])
         self.assertFalse(any("continue-on-error" in step for step in steps))
 
     def test_verification_binds_identity_ref_and_digest(self) -> None:

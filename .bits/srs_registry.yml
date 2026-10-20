@@ -1,19 +1,17 @@
-# ─── CGRF Header ───────────────────────────────────────────────
-# File:        .bits/srs_registry.yml
-# Stage:       11_COMMIT
-# SRS:         SRS-CN-RESEARCH-GOVERNANCE-001
-# CAPS:        pending
-# CK:          pending
-# Dispatch:    DISP-GOVERNANCE-research
-# Seat:        BITS-CODEGEN
-# Owner:       Citadel Nexus Inc.
-# Created:     2026-10-20
-# Depends:     .bits/srs/SRS-CN-RESEARCH-GOVERNANCE-001.md
-# EnumType:    ConfigDoc
-# EnumEdges:   DEPENDS_ON .bits/srs/SRS-CN-RESEARCH-GOVERNANCE-001.md
-# DAG Node:    none
-# Intent:      Register the operator-authorized governance SRS without replacing existing work.
-# ───────────────────────────────────────────────────────────────
+# File: .bits/srs_registry.yml
+# Stage: 11_COMMIT
+# SRS: SRS-CN-RESEARCH-BUILD-001
+# CAPS: pending
+# CK: pending
+# Dispatch: DISP-BUILD-research
+# Seat: BITS-CODEGEN
+# Owner: Citadel Nexus Inc.
+# Created: 2026-10-20
+# Depends: .bits/srs/SRS-CN-RESEARCH-BUILD-001.md, .bits/srs/SRS-CN-RESEARCH-GOVERNANCE-001.md
+# EnumType: ConfigDoc
+# EnumEdges: DEPENDS_ON .bits/srs/SRS-CN-RESEARCH-BUILD-001.md; DEPENDS_ON .bits/srs/SRS-CN-RESEARCH-GOVERNANCE-001.md
+# DAG Node: none
+# Intent: Register the authorized build SRS while retaining prior governance and Living World work.
 
 # Living-World SRS registry
 
@@ -54,3 +52,35 @@ SRS-CN-RESEARCH-GOVERNANCE-001:
     - .github/BRANCH_PROTECTION.md
     - .github/PROVENANCE.md
     - .github/workflows/build-provenance.yml
+
+SRS-CN-RESEARCH-BUILD-001:
+  title: Research Guild reproducible build repair
+  status: in_progress
+  dispatch: DISP-BUILD-research
+  guild: research
+  champion: Scholar
+  mode: staging
+  cks_gate: B+/75
+  caps_minimum: B+
+  cks: pending
+  caps: pending
+  ck: pending
+  paths:
+    - AGENTS.md
+    - CLAUDE.md
+    - .bits/
+    - .github/
+    - .nvmrc
+    - .nvmrc.cgrf.yaml
+    - .gitignore
+    - .dockerignore
+    - package.json
+    - package.json.cgrf.yaml
+    - package-lock.json
+    - package-lock.json.cgrf.yaml
+    - tsconfig.json
+    - tsconfig.json.cgrf.yaml
+    - eslint.config.mjs
+    - tests/
+    - docker/Dockerfile
+    - README.md
