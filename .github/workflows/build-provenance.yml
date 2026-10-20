@@ -1,0 +1,129 @@
+# ─── CGRF Header ───────────────────────────────────────────────
+# File:        .github/workflows/build-provenance.yml
+# Stage:       11_COMMIT
+# SRS:         SRS-CN-RESEARCH-GOVERNANCE-001
+# CAPS:        pending
+# CK:          pending
+# Dispatch:    DISP-GOVERNANCE-research
+# Seat:        BITS-CODEGEN
+# Owner:       Citadel Nexus Inc.
+# Created:     2026-10-20
+# Depends:     package.json, .bits/checks/test_governance.py
+# EnumType:    Workflow
+# EnumEdges:   DEPENDS_ON package.json; DEPENDS_ON .bits/checks/test_governance.py
+# DAG Node:    none
+# Intent:      Bind compiled Research archives to trusted main builds using keyless signed provenance.
+# ───────────────────────────────────────────────────────────────
+
+name: Build provenance
+
+on:
+  pull_request:
+    branches: [main]
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  governance:
+    name: Governance checks
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - run: python -m pip install PyYAML==6.0.3
+      - run: python -m unittest discover -s .bits/checks -p 'test_*.py' -v
+
+  build:
+    name: Build artifact
+    if: github.event_name != 'workflow_dispatch' || github.ref == 'refs/heads/main'
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+      - name: Require reproducible build inputs
+        run: |
+          if [ ! -f package-lock.json ] || [ ! -f tsconfig.json ]; then
+            echo '::error::Restore the npm lockfile and TypeScript build configuration in an application-scaffold dispatch.'
+            exit 1
+          fi
+      - run: npm ci
+      - run: npm run lint
+      - run: npm test
+      - run: npm run build
+      - name: Archive compiled output
+        env:
+          ARTIFACT_NAME: research-build-${{ github.sha }}.tar.gz
+        run: |
+          test -s dist/index.js
+          mkdir -p artifact
+          tar -czf "artifact/$ARTIFACT_NAME" package.json dist
+      - name: Upload build for this run
+        uses: actions/upload-artifact@v4
+        with:
+          name: research-build-${{ github.sha }}
+          path: artifact/research-build-${{ github.sha }}.tar.gz
+          if-no-files-found: error
+          retention-days: 14
+
+  attest:
+    name: Attest artifact
+    needs: [governance, build]
+    if: >-
+      github.repository == 'citadel-nexus/guild-research' &&
+      github.ref == 'refs/heads/main' &&
+      (github.event_name == 'push' || github.event_name == 'workflow_dispatch')
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      id-token: write
+      attestations: write
+    steps:
+      # No checkout or repository scripts in the signing job.
+      # Download defaults to this workflow run; never take an artifact from a PR run.
+      - uses: actions/download-artifact@v4
+        with:
+          name: research-build-${{ github.sha }}
+          path: signed
+      - name: Sign SLSA provenance for the archive digest
+        id: provenance
+        uses: actions/attest-build-provenance@v3
+        with:
+          subject-path: signed/research-build-${{ github.sha }}.tar.gz
+      - name: Preserve the signed attestation bundle
+        env:
+          BUNDLE_PATH: ${{ steps.provenance.outputs.bundle-path }}
+        run: cp "$BUNDLE_PATH" signed/provenance.sigstore.json
+      - name: Verify before distributing
+        env:
+          GH_TOKEN: ${{ github.token }}
+          SOURCE_SHA: ${{ github.sha }}
+        run: |
+          gh attestation verify "signed/research-build-$SOURCE_SHA.tar.gz" \
+            --bundle signed/provenance.sigstore.json \
+            --repo citadel-nexus/guild-research \
+            --signer-workflow citadel-nexus/guild-research/.github/workflows/build-provenance.yml \
+            --source-ref refs/heads/main \
+            --source-digest "$SOURCE_SHA" \
+            --predicate-type https://slsa.dev/provenance/v1 \
+            --deny-self-hosted-runners
+      - name: Upload verified archive and signature bundle
+        uses: actions/upload-artifact@v4
+        with:
+          name: signed-research-build-${{ github.sha }}
+          path: |
+            signed/research-build-${{ github.sha }}.tar.gz
+            signed/provenance.sigstore.json
+          if-no-files-found: error
+          retention-days: 30

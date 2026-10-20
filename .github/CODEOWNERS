@@ -1,5 +1,25 @@
-# Guild code owners — all PRs require review from the guild lead team
+# ─── CGRF Header ───────────────────────────────────────────────
+# File:        .github/CODEOWNERS
+# Stage:       06_PLAN
+# SRS:         SRS-CN-RESEARCH-GOVERNANCE-001
+# CAPS:        pending
+# CK:          pending
+# Dispatch:    DISP-GOVERNANCE-research
+# Seat:        BITS-CODEGEN
+# Owner:       Citadel Nexus Inc.
+# Created:     2026-10-20
+# Depends:     GOVERNANCE.md
+# EnumType:    ConfigDoc
+# EnumEdges:   DEPENDS_ON GOVERNANCE.md
+# DAG Node:    none
+# Intent:      Route every Research change to guildmaster review through the existing owner team.
+# ───────────────────────────────────────────────────────────────
+
+# Guildmaster: Scholar (GitLab user: scholar).
+# GitHub identity mapping is pending administrator confirmation; do not assume @scholar.
+# The existing GitHub Research leads team represents the guildmaster's review ownership.
+# Admin: ensure Scholar's verified GitHub account belongs to this visible team with write access.
 * @citadel-nexus/guild-research-leads
 
-# Guild SDK public interface
-src/index.ts @citadel-nexus/sdk-core
+# Consult @citadel-nexus/sdk-core on src/index.ts changes; guild ownership still applies.
+# No narrower owner rule may bypass Research review, including this file and workflows.
