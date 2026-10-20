@@ -1,20 +1,18 @@
 <!--
-# ─── CGRF Header ───────────────────────────────────────────────
-# File:        .github/BRANCH_PROTECTION.md
-# Stage:       06_PLAN
-# SRS:         SRS-CN-RESEARCH-GOVERNANCE-001
-# CAPS:        pending
-# CK:          pending
-# Dispatch:    DISP-GOVERNANCE-research
-# Seat:        BITS-CODEGEN
-# Owner:       Citadel Nexus Inc.
-# Created:     2026-10-20
-# Depends:     .github/CODEOWNERS, .github/workflows/build-provenance.yml
-# EnumType:    Doc
-# EnumEdges:   DEPENDS_ON .github/CODEOWNERS; DEPENDS_ON .github/workflows/build-provenance.yml
-# DAG Node:    none
-# Intent:      Specify administrator-owned enforcement without pretending repository files apply settings.
-# ───────────────────────────────────────────────────────────────
+# File: .github/BRANCH_PROTECTION.md
+# Stage: 06_PLAN
+# SRS: SRS-CN-RESEARCH-BUILD-001
+# CAPS: pending
+# CK: pending
+# Dispatch: DISP-BUILD-research
+# Seat: BITS-CODEGEN
+# Owner: Citadel Nexus Inc.
+# Created: 2026-10-20
+# Depends: .github/CODEOWNERS, .github/workflows/build-provenance.yml, .github/BUILD.md
+# EnumType: Doc
+# EnumEdges: DEPENDS_ON .github/CODEOWNERS; DEPENDS_ON .github/workflows/build-provenance.yml; DEPENDS_ON .github/BUILD.md
+# DAG Node: none
+# Intent: Describe remaining administrator activation and build-locking requirements accurately.
 -->
 
 # Default-branch protection requirements
@@ -48,7 +46,8 @@ in GitHub Settings → Rules → Rulesets, or equivalent branch protection:
 are PR jobs in `Build provenance`. Do **not** require `Attest artifact`: it runs
 only after changes reach trusted `main`, and is deliberately skipped on PRs.
 Do not require `docker` or scheduled-only scan jobs on PRs. The existing default
-branch CI and release workflows are unchanged by this work.
+branch CI and release workflows retain their publication triggers; the build
+repair aligns their Node runtime and mandatory quality gates.
 
 ## Administrator activation order
 
@@ -59,9 +58,9 @@ branch CI and release workflows are unchanged by this work.
    required. The App is the expected guildmaster automation actor, not a code
    owner or the source of the GitHub Actions checks listed above. Do not add it
    to the bypass list. Record the guildmasters approval required by the charter.
-2. Have an application-scaffold dispatch supply the missing lockfile, dev tools
-   and TypeScript/ESLint configuration. Existing CI already runs `npm ci`; the
-   new build also refuses to proceed without a lockfile. Do not mark missing
+2. Complete dependency locking under `DISP-BUILD-research` (see BUILD.md).
+   Toolchain and TypeScript/ESLint configuration are now supplied, but the real
+   SDK dependency graph must be available to generate the lockfile and run `npm ci`. Do not mark missing
    builds successful or disable their checks to bootstrap governance.
 3. Enable GitHub Actions and permit the actions used by the new workflow. Allow
    job-scoped `id-token: write` and `attestations: write` on trusted main runs.

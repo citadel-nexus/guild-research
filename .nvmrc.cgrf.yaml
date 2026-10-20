@@ -1,0 +1,29 @@
+# File: .nvmrc.cgrf.yaml
+# Stage: 11_COMMIT
+# SRS: SRS-CN-RESEARCH-BUILD-001
+# CAPS: pending
+# CK: pending
+# Dispatch: DISP-BUILD-research
+# Seat: BITS-CODEGEN
+# Owner: Citadel Nexus Inc.
+# Created: 2026-10-20
+# Depends: .nvmrc
+# EnumType: ConfigDoc
+# EnumEdges: DEPENDS_ON .nvmrc
+# DAG Node: none
+# Intent: Describe governance metadata for .nvmrc without changing its file format.
+
+File: .nvmrc
+Stage: 11_COMMIT
+SRS: SRS-CN-RESEARCH-BUILD-001
+CAPS: pending
+CK: pending
+Dispatch: DISP-BUILD-research
+Seat: BITS-CODEGEN
+Owner: Citadel Nexus Inc.
+Created: '2026-10-20'
+Depends: package.json
+EnumType: ConfigDoc
+EnumEdges: DEPENDS_ON package.json
+DAG Node: none
+Intent: Use the same supported Node runtime locally and in CI.

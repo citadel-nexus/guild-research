@@ -1,0 +1,1684 @@
+{
+  "vectors": [
+    {
+      "type": "A",
+      "file_path": ".bits/srs/SRS-CN-RESEARCH-BUILD-001.md",
+      "cket_stage": "04_HYPOTHESIZE",
+      "srs_codes": [
+        "SRS-CN-RESEARCH-BUILD-001"
+      ],
+      "enum_type": "Doc",
+      "functions": [],
+      "dependencies": [
+        "package.json",
+        ".github/workflows/build-provenance.yml"
+      ],
+      "lines": 61,
+      "caps_grade": "pending",
+      "ck_stamp": "pending",
+      "intent_statement": "Restore reproducible Research build gates before provenance can be produced.",
+      "objective_id": "DISP-BUILD-research",
+      "outcome": "stored",
+      "supersedes": false,
+      "dispatch_id": "DISP-BUILD-research",
+      "seat": "BITS-CODEGEN",
+      "domain": "engineering",
+      "source_type": "seat_dispatch",
+      "tags": [
+        "DISP-BUILD-research",
+        "BITS-CODEGEN",
+        "SRS-CN-RESEARCH-BUILD-001",
+        "build-repair"
+      ],
+      "tenant_id": null
+    },
+    {
+      "type": "A",
+      "file_path": ".bits/queue/DISP-BUILD-research.md",
+      "cket_stage": "11_COMMIT",
+      "srs_codes": [
+        "SRS-CN-RESEARCH-BUILD-001"
+      ],
+      "enum_type": "ConfigDoc",
+      "functions": [],
+      "dependencies": [
+        ".bits/srs/SRS-CN-RESEARCH-BUILD-001.md"
+      ],
+      "lines": 90,
+      "caps_grade": "pending",
+      "ck_stamp": "pending",
+      "intent_statement": "Authorize and track ten staging build-repair steps with explicit failure reporting.",
+      "objective_id": "DISP-BUILD-research",
+      "outcome": "stored",
+      "supersedes": false,
+      "dispatch_id": "DISP-BUILD-research",
+      "seat": "BITS-CODEGEN",
+      "domain": "engineering",
+      "source_type": "seat_dispatch",
+      "tags": [
+        "DISP-BUILD-research",
+        "BITS-CODEGEN",
+        "SRS-CN-RESEARCH-BUILD-001",
+        "build-repair"
+      ],
+      "tenant_id": null
+    },
+    {
+      "type": "A",
+      "file_path": "package.json",
+      "cket_stage": "11_COMMIT",
+      "srs_codes": [
+        "SRS-CN-RESEARCH-BUILD-001"
+      ],
+      "enum_type": "ConfigDoc",
+      "functions": [],
+      "dependencies": [
+        "tsconfig.json",
+        "eslint.config.mjs",
+        ".nvmrc",
+        "tests/health.test.mjs",
+        "tests/build.test.mjs"
+      ],
+      "lines": 31,
+      "caps_grade": "pending",
+      "ck_stamp": "pending",
+      "intent_statement": "Declare the real build gates and exact staging toolchain without replacing runtime dependencies.",
+      "objective_id": "DISP-BUILD-research",
+      "outcome": "stored",
+      "supersedes": false,
+      "dispatch_id": "DISP-BUILD-research",
+      "seat": "BITS-CODEGEN",
+      "domain": "engineering",
+      "source_type": "seat_dispatch",
+      "tags": [
+        "DISP-BUILD-research",
+        "BITS-CODEGEN",
+        "SRS-CN-RESEARCH-BUILD-001",
+        "build-repair"
+      ],
+      "tenant_id": null
+    },
+    {
+      "type": "A",
+      "file_path": "package.json.cgrf.yaml",
+      "cket_stage": "11_COMMIT",
+      "srs_codes": [
+        "SRS-CN-RESEARCH-BUILD-001"
+      ],
+      "enum_type": "ConfigDoc",
+      "functions": [],
+      "dependencies": [
+        "package.json"
+      ],
+      "lines": 31,
+      "caps_grade": "pending",
+      "ck_stamp": "pending",
+      "intent_statement": "Describe governance metadata for package.json without changing its file format.",
+      "objective_id": "DISP-BUILD-research",
+      "outcome": "stored",
+      "supersedes": false,
+      "dispatch_id": "DISP-BUILD-research",
+      "seat": "BITS-CODEGEN",
+      "domain": "engineering",
+      "source_type": "seat_dispatch",
+      "tags": [
+        "DISP-BUILD-research",
+        "BITS-CODEGEN",
+        "SRS-CN-RESEARCH-BUILD-001",
+        "build-repair"
+      ],
+      "tenant_id": null
+    },
+    {
+      "type": "A",
+      "file_path": ".nvmrc",
+      "cket_stage": "11_COMMIT",
+      "srs_codes": [
+        "SRS-CN-RESEARCH-BUILD-001"
+      ],
+      "enum_type": "ConfigDoc",
+      "functions": [],
+      "dependencies": [
+        "package.json"
+      ],
+      "lines": 1,
+      "caps_grade": "pending",
+      "ck_stamp": "pending",
+      "intent_statement": "Use the same supported Node runtime locally and in CI.",
+      "objective_id": "DISP-BUILD-research",
+      "outcome": "stored",
+      "supersedes": false,
+      "dispatch_id": "DISP-BUILD-research",
+      "seat": "BITS-CODEGEN",
+      "domain": "engineering",
+      "source_type": "seat_dispatch",
+      "tags": [
+        "DISP-BUILD-research",
+        "BITS-CODEGEN",
+        "SRS-CN-RESEARCH-BUILD-001",
+        "build-repair"
+      ],
+      "tenant_id": null
+    },
+    {
+      "type": "A",
+      "file_path": ".nvmrc.cgrf.yaml",
+      "cket_stage": "11_COMMIT",
+      "srs_codes": [
+        "SRS-CN-RESEARCH-BUILD-001"
+      ],
+      "enum_type": "ConfigDoc",
+      "functions": [],
+      "dependencies": [
+        ".nvmrc"
+      ],
+      "lines": 29,
+      "caps_grade": "pending",
+      "ck_stamp": "pending",
+      "intent_statement": "Describe governance metadata for .nvmrc without changing its file format.",
+      "objective_id": "DISP-BUILD-research",
+      "outcome": "stored",
+      "supersedes": false,
+      "dispatch_id": "DISP-BUILD-research",
+      "seat": "BITS-CODEGEN",
+      "domain": "engineering",
+      "source_type": "seat_dispatch",
+      "tags": [
+        "DISP-BUILD-research",
+        "BITS-CODEGEN",
+        "SRS-CN-RESEARCH-BUILD-001",
+        "build-repair"
+      ],
+      "tenant_id": null
+    },
+    {
+      "type": "A",
+      "file_path": "tsconfig.json",
+      "cket_stage": "11_COMMIT",
+      "srs_codes": [
+        "SRS-CN-RESEARCH-BUILD-001"
+      ],
+      "enum_type": "ConfigDoc",
+      "functions": [],
+      "dependencies": [
+        "package.json"
+      ],
+      "lines": 29,
+      "caps_grade": "pending",
+      "ck_stamp": "pending",
+      "intent_statement": "Typecheck all Research source strictly and emit compiled output only when the build is valid.",
+      "objective_id": "DISP-BUILD-research",
+      "outcome": "stored",
+      "supersedes": false,
+      "dispatch_id": "DISP-BUILD-research",
+      "seat": "BITS-CODEGEN",
+      "domain": "engineering",
+      "source_type": "seat_dispatch",
+      "tags": [
+        "DISP-BUILD-research",
+        "BITS-CODEGEN",
+        "SRS-CN-RESEARCH-BUILD-001",
+        "build-repair"
+      ],
+      "tenant_id": null
+    },
+    {
+      "type": "A",
+      "file_path": "tsconfig.json.cgrf.yaml",
+      "cket_stage": "11_COMMIT",
+      "srs_codes": [
+        "SRS-CN-RESEARCH-BUILD-001"
+      ],
+      "enum_type": "ConfigDoc",
+      "functions": [],
+      "dependencies": [
+        "tsconfig.json"
+      ],
+      "lines": 30,
+      "caps_grade": "pending",
+      "ck_stamp": "pending",
+      "intent_statement": "Describe governance metadata for tsconfig.json without changing its file format.",
+      "objective_id": "DISP-BUILD-research",
+      "outcome": "stored",
+      "supersedes": false,
+      "dispatch_id": "DISP-BUILD-research",
+      "seat": "BITS-CODEGEN",
+      "domain": "engineering",
+      "source_type": "seat_dispatch",
+      "tags": [
+        "DISP-BUILD-research",
+        "BITS-CODEGEN",
+        "SRS-CN-RESEARCH-BUILD-001",
+        "build-repair"
+      ],
+      "tenant_id": null
+    },
+    {
+      "type": "A",
+      "file_path": "eslint.config.mjs",
+      "cket_stage": "11_COMMIT",
+      "srs_codes": [
+        "SRS-CN-RESEARCH-BUILD-001"
+      ],
+      "enum_type": "ConfigDoc",
+      "functions": [],
+      "dependencies": [
+        "package.json"
+      ],
+      "lines": 46,
+      "caps_grade": "pending",
+      "ck_stamp": "pending",
+      "intent_statement": "Lint TypeScript and test code with recommended rules instead of an absent ESLint configuration.",
+      "objective_id": "DISP-BUILD-research",
+      "outcome": "stored",
+      "supersedes": false,
+      "dispatch_id": "DISP-BUILD-research",
+      "seat": "BITS-CODEGEN",
+      "domain": "engineering",
+      "source_type": "seat_dispatch",
+      "tags": [
+        "DISP-BUILD-research",
+        "BITS-CODEGEN",
+        "SRS-CN-RESEARCH-BUILD-001",
+        "build-repair"
+      ],
+      "tenant_id": null
+    },
+    {
+      "type": "A",
+      "file_path": ".gitignore",
+      "cket_stage": "11_COMMIT",
+      "srs_codes": [
+        "SRS-CN-RESEARCH-BUILD-001"
+      ],
+      "enum_type": "ConfigDoc",
+      "functions": [],
+      "dependencies": [
+        "package.json"
+      ],
+      "lines": 23,
+      "caps_grade": "pending",
+      "ck_stamp": "pending",
+      "intent_statement": "Keep installed dependencies, build output and local secrets out of review.",
+      "objective_id": "DISP-BUILD-research",
+      "outcome": "stored",
+      "supersedes": false,
+      "dispatch_id": "DISP-BUILD-research",
+      "seat": "BITS-CODEGEN",
+      "domain": "engineering",
+      "source_type": "seat_dispatch",
+      "tags": [
+        "DISP-BUILD-research",
+        "BITS-CODEGEN",
+        "SRS-CN-RESEARCH-BUILD-001",
+        "build-repair"
+      ],
+      "tenant_id": null
+    },
+    {
+      "type": "A",
+      "file_path": ".dockerignore",
+      "cket_stage": "11_COMMIT",
+      "srs_codes": [
+        "SRS-CN-RESEARCH-BUILD-001"
+      ],
+      "enum_type": "ConfigDoc",
+      "functions": [],
+      "dependencies": [
+        "docker/Dockerfile"
+      ],
+      "lines": 23,
+      "caps_grade": "pending",
+      "ck_stamp": "pending",
+      "intent_statement": "Prevent local dependency trees and environment files from entering Docker builds.",
+      "objective_id": "DISP-BUILD-research",
+      "outcome": "stored",
+      "supersedes": false,
+      "dispatch_id": "DISP-BUILD-research",
+      "seat": "BITS-CODEGEN",
+      "domain": "engineering",
+      "source_type": "seat_dispatch",
+      "tags": [
+        "DISP-BUILD-research",
+        "BITS-CODEGEN",
+        "SRS-CN-RESEARCH-BUILD-001",
+        "build-repair"
+      ],
+      "tenant_id": null
+    },
+    {
+      "type": "A",
+      "file_path": "tests/health.test.mjs",
+      "cket_stage": "08_TEST",
+      "srs_codes": [
+        "SRS-CN-RESEARCH-BUILD-001"
+      ],
+      "enum_type": "Test",
+      "functions": [],
+      "dependencies": [
+        "src/routes/health.ts",
+        "package.json"
+      ],
+      "lines": 41,
+      "caps_grade": "pending",
+      "ck_stamp": "pending",
+      "intent_statement": "Verify the existing public health response without production or event-bus connections.",
+      "objective_id": "DISP-BUILD-research",
+      "outcome": "stored",
+      "supersedes": false,
+      "dispatch_id": "DISP-BUILD-research",
+      "seat": "BITS-CODEGEN",
+      "domain": "engineering",
+      "source_type": "seat_dispatch",
+      "tags": [
+        "DISP-BUILD-research",
+        "BITS-CODEGEN",
+        "SRS-CN-RESEARCH-BUILD-001",
+        "build-repair"
+      ],
+      "tenant_id": null
+    },
+    {
+      "type": "A",
+      "file_path": "tests/build.test.mjs",
+      "cket_stage": "08_TEST",
+      "srs_codes": [
+        "SRS-CN-RESEARCH-BUILD-001"
+      ],
+      "enum_type": "Test",
+      "functions": [],
+      "dependencies": [
+        "package.json"
+      ],
+      "lines": 45,
+      "caps_grade": "pending",
+      "ck_stamp": "pending",
+      "intent_statement": "Prevent stale output from surviving a clean build while preserving source files.",
+      "objective_id": "DISP-BUILD-research",
+      "outcome": "stored",
+      "supersedes": false,
+      "dispatch_id": "DISP-BUILD-research",
+      "seat": "BITS-CODEGEN",
+      "domain": "engineering",
+      "source_type": "seat_dispatch",
+      "tags": [
+        "DISP-BUILD-research",
+        "BITS-CODEGEN",
+        "SRS-CN-RESEARCH-BUILD-001",
+        "build-repair"
+      ],
+      "tenant_id": null
+    },
+    {
+      "type": "A",
+      "file_path": ".bits/checks/test_build.py",
+      "cket_stage": "11_COMMIT",
+      "srs_codes": [
+        "SRS-CN-RESEARCH-BUILD-001"
+      ],
+      "enum_type": "Test",
+      "functions": [
+        "workflow"
+      ],
+      "dependencies": [
+        "package.json",
+        "tsconfig.json",
+        ".nvmrc",
+        ".github/workflows/ci.yml",
+        ".github/workflows/release.yml",
+        ".github/workflows/security-scan.yml",
+        ".github/workflows/build-provenance.yml"
+      ],
+      "lines": 109,
+      "caps_grade": "pending",
+      "ck_stamp": "pending",
+      "intent_statement": "Keep strict build checks, pinned runtimes, real dependencies and security scans mandatory.",
+      "objective_id": "DISP-BUILD-research",
+      "outcome": "stored",
+      "supersedes": false,
+      "dispatch_id": "DISP-BUILD-research",
+      "seat": "BITS-CODEGEN",
+      "domain": "engineering",
+      "source_type": "seat_dispatch",
+      "tags": [
+        "DISP-BUILD-research",
+        "BITS-CODEGEN",
+        "SRS-CN-RESEARCH-BUILD-001",
+        "build-repair"
+      ],
+      "tenant_id": null
+    },
+    {
+      "type": "A",
+      "file_path": ".github/BUILD.md",
+      "cket_stage": "06_PLAN",
+      "srs_codes": [
+        "SRS-CN-RESEARCH-BUILD-001"
+      ],
+      "enum_type": "Doc",
+      "functions": [],
+      "dependencies": [
+        "package.json",
+        ".nvmrc",
+        "tsconfig.json",
+        ".github/PROVENANCE.md",
+        ".bits/queue/DISP-BUILD-research.md"
+      ],
+      "lines": 109,
+      "caps_grade": "pending",
+      "ck_stamp": "pending",
+      "intent_statement": "Document reproducible build recovery and distinguish offline checks from a successful clean build.",
+      "objective_id": "DISP-BUILD-research",
+      "outcome": "stored",
+      "supersedes": false,
+      "dispatch_id": "DISP-BUILD-research",
+      "seat": "BITS-CODEGEN",
+      "domain": "engineering",
+      "source_type": "seat_dispatch",
+      "tags": [
+        "DISP-BUILD-research",
+        "BITS-CODEGEN",
+        "SRS-CN-RESEARCH-BUILD-001",
+        "build-repair"
+      ],
+      "tenant_id": null
+    },
+    {
+      "type": "A",
+      "file_path": "AGENTS.md",
+      "cket_stage": "04_HYPOTHESIZE",
+      "srs_codes": [
+        "SRS-CN-RESEARCH-BUILD-001"
+      ],
+      "enum_type": "ConfigDoc",
+      "functions": [],
+      "dependencies": [
+        ".bits/queue/DISP-BUILD-research.md"
+      ],
+      "lines": 85,
+      "caps_grade": "pending",
+      "ck_stamp": "pending",
+      "intent_statement": "Apply the operator-authorized build-repair scope while retaining staging boundaries.",
+      "objective_id": "DISP-BUILD-research",
+      "outcome": "stored",
+      "supersedes": false,
+      "dispatch_id": "DISP-BUILD-research",
+      "seat": "BITS-CODEGEN",
+      "domain": "engineering",
+      "source_type": "seat_dispatch",
+      "tags": [
+        "DISP-BUILD-research",
+        "BITS-CODEGEN",
+        "SRS-CN-RESEARCH-BUILD-001",
+        "build-repair"
+      ],
+      "tenant_id": null
+    },
+    {
+      "type": "A",
+      "file_path": "CLAUDE.md",
+      "cket_stage": "04_HYPOTHESIZE",
+      "srs_codes": [
+        "SRS-CN-RESEARCH-BUILD-001"
+      ],
+      "enum_type": "Doc",
+      "functions": [],
+      "dependencies": [
+        "AGENTS.md"
+      ],
+      "lines": 36,
+      "caps_grade": "pending",
+      "ck_stamp": "pending",
+      "intent_statement": "Direct IDE seats to the active build-repair dispatch and its dependency limitations.",
+      "objective_id": "DISP-BUILD-research",
+      "outcome": "stored",
+      "supersedes": false,
+      "dispatch_id": "DISP-BUILD-research",
+      "seat": "BITS-CODEGEN",
+      "domain": "engineering",
+      "source_type": "seat_dispatch",
+      "tags": [
+        "DISP-BUILD-research",
+        "BITS-CODEGEN",
+        "SRS-CN-RESEARCH-BUILD-001",
+        "build-repair"
+      ],
+      "tenant_id": null
+    },
+    {
+      "type": "A",
+      "file_path": ".bits/context.md",
+      "cket_stage": "11_COMMIT",
+      "srs_codes": [
+        "SRS-CN-RESEARCH-BUILD-001"
+      ],
+      "enum_type": "ConfigDoc",
+      "functions": [],
+      "dependencies": [
+        ".bits/queue/DISP-BUILD-research.md"
+      ],
+      "lines": 35,
+      "caps_grade": "pending",
+      "ck_stamp": "pending",
+      "intent_statement": "Record active build-repair scope and confirmed guild ownership.",
+      "objective_id": "DISP-BUILD-research",
+      "outcome": "stored",
+      "supersedes": false,
+      "dispatch_id": "DISP-BUILD-research",
+      "seat": "BITS-CODEGEN",
+      "domain": "engineering",
+      "source_type": "seat_dispatch",
+      "tags": [
+        "DISP-BUILD-research",
+        "BITS-CODEGEN",
+        "SRS-CN-RESEARCH-BUILD-001",
+        "build-repair"
+      ],
+      "tenant_id": null
+    },
+    {
+      "type": "A",
+      "file_path": ".bits/srs_registry.yml",
+      "cket_stage": "11_COMMIT",
+      "srs_codes": [
+        "SRS-CN-RESEARCH-BUILD-001"
+      ],
+      "enum_type": "ConfigDoc",
+      "functions": [],
+      "dependencies": [
+        ".bits/srs/SRS-CN-RESEARCH-BUILD-001.md",
+        ".bits/srs/SRS-CN-RESEARCH-GOVERNANCE-001.md"
+      ],
+      "lines": 86,
+      "caps_grade": "pending",
+      "ck_stamp": "pending",
+      "intent_statement": "Register the authorized build SRS while retaining prior governance and Living World work.",
+      "objective_id": "DISP-BUILD-research",
+      "outcome": "stored",
+      "supersedes": false,
+      "dispatch_id": "DISP-BUILD-research",
+      "seat": "BITS-CODEGEN",
+      "domain": "engineering",
+      "source_type": "seat_dispatch",
+      "tags": [
+        "DISP-BUILD-research",
+        "BITS-CODEGEN",
+        "SRS-CN-RESEARCH-BUILD-001",
+        "build-repair"
+      ],
+      "tenant_id": null
+    },
+    {
+      "type": "A",
+      "file_path": ".bits/checks/test_governance.py",
+      "cket_stage": "11_COMMIT",
+      "srs_codes": [
+        "SRS-CN-RESEARCH-BUILD-001"
+      ],
+      "enum_type": "Test",
+      "functions": [
+        "load_workflow"
+      ],
+      "dependencies": [
+        ".github/workflows/build-provenance.yml",
+        ".github/CODEOWNERS",
+        ".bits/srs_registry.yml"
+      ],
+      "lines": 203,
+      "caps_grade": "pending",
+      "ck_stamp": "pending",
+      "intent_statement": "Retain signing trust-boundary checks while requiring typechecking and lockfile packaging.",
+      "objective_id": "DISP-BUILD-research",
+      "outcome": "stored",
+      "supersedes": false,
+      "dispatch_id": "DISP-BUILD-research",
+      "seat": "BITS-CODEGEN",
+      "domain": "engineering",
+      "source_type": "seat_dispatch",
+      "tags": [
+        "DISP-BUILD-research",
+        "BITS-CODEGEN",
+        "SRS-CN-RESEARCH-BUILD-001",
+        "build-repair"
+      ],
+      "tenant_id": null
+    },
+    {
+      "type": "A",
+      "file_path": ".github/BRANCH_PROTECTION.md",
+      "cket_stage": "06_PLAN",
+      "srs_codes": [
+        "SRS-CN-RESEARCH-BUILD-001"
+      ],
+      "enum_type": "Doc",
+      "functions": [],
+      "dependencies": [
+        ".github/CODEOWNERS",
+        ".github/workflows/build-provenance.yml",
+        ".github/BUILD.md"
+      ],
+      "lines": 94,
+      "caps_grade": "pending",
+      "ck_stamp": "pending",
+      "intent_statement": "Describe remaining administrator activation and build-locking requirements accurately.",
+      "objective_id": "DISP-BUILD-research",
+      "outcome": "stored",
+      "supersedes": false,
+      "dispatch_id": "DISP-BUILD-research",
+      "seat": "BITS-CODEGEN",
+      "domain": "engineering",
+      "source_type": "seat_dispatch",
+      "tags": [
+        "DISP-BUILD-research",
+        "BITS-CODEGEN",
+        "SRS-CN-RESEARCH-BUILD-001",
+        "build-repair"
+      ],
+      "tenant_id": null
+    },
+    {
+      "type": "A",
+      "file_path": ".github/PROVENANCE.md",
+      "cket_stage": "06_PLAN",
+      "srs_codes": [
+        "SRS-CN-RESEARCH-BUILD-001"
+      ],
+      "enum_type": "Doc",
+      "functions": [],
+      "dependencies": [
+        ".github/workflows/build-provenance.yml",
+        ".github/BUILD.md"
+      ],
+      "lines": 113,
+      "caps_grade": "pending",
+      "ck_stamp": "pending",
+      "intent_statement": "Verify signed archives that include compiled output and its dependency lockfile.",
+      "objective_id": "DISP-BUILD-research",
+      "outcome": "stored",
+      "supersedes": false,
+      "dispatch_id": "DISP-BUILD-research",
+      "seat": "BITS-CODEGEN",
+      "domain": "engineering",
+      "source_type": "seat_dispatch",
+      "tags": [
+        "DISP-BUILD-research",
+        "BITS-CODEGEN",
+        "SRS-CN-RESEARCH-BUILD-001",
+        "build-repair"
+      ],
+      "tenant_id": null
+    },
+    {
+      "type": "A",
+      "file_path": ".github/workflows/build-provenance.yml",
+      "cket_stage": "11_COMMIT",
+      "srs_codes": [
+        "SRS-CN-RESEARCH-BUILD-001"
+      ],
+      "enum_type": "Workflow",
+      "functions": [],
+      "dependencies": [
+        "package.json",
+        ".nvmrc",
+        ".bits/checks/test_governance.py",
+        ".bits/checks/test_build.py"
+      ],
+      "lines": 128,
+      "caps_grade": "pending",
+      "ck_stamp": "pending",
+      "intent_statement": "Require pinned build gates before signing the actual compiled archive and dependency lockfile.",
+      "objective_id": "DISP-BUILD-research",
+      "outcome": "stored",
+      "supersedes": false,
+      "dispatch_id": "DISP-BUILD-research",
+      "seat": "BITS-CODEGEN",
+      "domain": "engineering",
+      "source_type": "seat_dispatch",
+      "tags": [
+        "DISP-BUILD-research",
+        "BITS-CODEGEN",
+        "SRS-CN-RESEARCH-BUILD-001",
+        "build-repair"
+      ],
+      "tenant_id": null
+    },
+    {
+      "type": "A",
+      "file_path": ".github/workflows/ci.yml",
+      "cket_stage": "11_COMMIT",
+      "srs_codes": [
+        "SRS-CN-RESEARCH-BUILD-001"
+      ],
+      "enum_type": "Workflow",
+      "functions": [],
+      "dependencies": [
+        "package.json",
+        ".nvmrc",
+        "docker/Dockerfile"
+      ],
+      "lines": 53,
+      "caps_grade": "pending",
+      "ck_stamp": "pending",
+      "intent_statement": "Apply the pinned runtime and strict typecheck gate while preserving CI publication boundaries.",
+      "objective_id": "DISP-BUILD-research",
+      "outcome": "stored",
+      "supersedes": false,
+      "dispatch_id": "DISP-BUILD-research",
+      "seat": "BITS-CODEGEN",
+      "domain": "engineering",
+      "source_type": "seat_dispatch",
+      "tags": [
+        "DISP-BUILD-research",
+        "BITS-CODEGEN",
+        "SRS-CN-RESEARCH-BUILD-001",
+        "build-repair"
+      ],
+      "tenant_id": null
+    },
+    {
+      "type": "A",
+      "file_path": ".github/workflows/release.yml",
+      "cket_stage": "11_COMMIT",
+      "srs_codes": [
+        "SRS-CN-RESEARCH-BUILD-001"
+      ],
+      "enum_type": "Workflow",
+      "functions": [],
+      "dependencies": [
+        "package.json",
+        ".nvmrc"
+      ],
+      "lines": 45,
+      "caps_grade": "pending",
+      "ck_stamp": "pending",
+      "intent_statement": "Require lint and typechecking before existing release publication on the pinned runtime.",
+      "objective_id": "DISP-BUILD-research",
+      "outcome": "stored",
+      "supersedes": false,
+      "dispatch_id": "DISP-BUILD-research",
+      "seat": "BITS-CODEGEN",
+      "domain": "engineering",
+      "source_type": "seat_dispatch",
+      "tags": [
+        "DISP-BUILD-research",
+        "BITS-CODEGEN",
+        "SRS-CN-RESEARCH-BUILD-001",
+        "build-repair"
+      ],
+      "tenant_id": null
+    },
+    {
+      "type": "A",
+      "file_path": ".github/workflows/security-scan.yml",
+      "cket_stage": "11_COMMIT",
+      "srs_codes": [
+        "SRS-CN-RESEARCH-BUILD-001"
+      ],
+      "enum_type": "Workflow",
+      "functions": [],
+      "dependencies": [
+        ".nvmrc"
+      ],
+      "lines": 58,
+      "caps_grade": "pending",
+      "ck_stamp": "pending",
+      "intent_statement": "Retain CodeQL and secret scanning with the same Node runtime as the build.",
+      "objective_id": "DISP-BUILD-research",
+      "outcome": "stored",
+      "supersedes": false,
+      "dispatch_id": "DISP-BUILD-research",
+      "seat": "BITS-CODEGEN",
+      "domain": "engineering",
+      "source_type": "seat_dispatch",
+      "tags": [
+        "DISP-BUILD-research",
+        "BITS-CODEGEN",
+        "SRS-CN-RESEARCH-BUILD-001",
+        "build-repair"
+      ],
+      "tenant_id": null
+    },
+    {
+      "type": "A",
+      "file_path": "docker/Dockerfile",
+      "cket_stage": "11_COMMIT",
+      "srs_codes": [
+        "SRS-CN-RESEARCH-BUILD-001"
+      ],
+      "enum_type": "ConfigDoc",
+      "functions": [],
+      "dependencies": [
+        "package.json",
+        ".nvmrc"
+      ],
+      "lines": 29,
+      "caps_grade": "pending",
+      "ck_stamp": "pending",
+      "intent_statement": "Align container compilation and runtime with the pinned Node release.",
+      "objective_id": "DISP-BUILD-research",
+      "outcome": "stored",
+      "supersedes": false,
+      "dispatch_id": "DISP-BUILD-research",
+      "seat": "BITS-CODEGEN",
+      "domain": "engineering",
+      "source_type": "seat_dispatch",
+      "tags": [
+        "DISP-BUILD-research",
+        "BITS-CODEGEN",
+        "SRS-CN-RESEARCH-BUILD-001",
+        "build-repair"
+      ],
+      "tenant_id": null
+    },
+    {
+      "type": "A",
+      "file_path": "README.md",
+      "cket_stage": "06_PLAN",
+      "srs_codes": [
+        "SRS-CN-RESEARCH-BUILD-001"
+      ],
+      "enum_type": "Doc",
+      "functions": [],
+      "dependencies": [
+        ".github/BUILD.md"
+      ],
+      "lines": 188,
+      "caps_grade": "pending",
+      "ck_stamp": "pending",
+      "intent_statement": "Document build gates and dependency recovery before starting the real Research SDK.",
+      "objective_id": "DISP-BUILD-research",
+      "outcome": "stored",
+      "supersedes": false,
+      "dispatch_id": "DISP-BUILD-research",
+      "seat": "BITS-CODEGEN",
+      "domain": "engineering",
+      "source_type": "seat_dispatch",
+      "tags": [
+        "DISP-BUILD-research",
+        "BITS-CODEGEN",
+        "SRS-CN-RESEARCH-BUILD-001",
+        "build-repair"
+      ],
+      "tenant_id": null
+    },
+    {
+      "type": "A",
+      "file_path": ".bits/out/DISP-BUILD-research/report.md",
+      "cket_stage": "11_COMMIT",
+      "srs_codes": [
+        "SRS-CN-RESEARCH-BUILD-001"
+      ],
+      "enum_type": "Doc",
+      "functions": [],
+      "dependencies": [
+        ".bits/checks/test_build.py",
+        ".github/BUILD.md",
+        ".bits/out/DISP-BUILD-research/memory.json"
+      ],
+      "lines": 134,
+      "caps_grade": "pending",
+      "ck_stamp": "pending",
+      "intent_statement": "Report completed staging repairs and unresolved clean-install/compiler blockers without claiming success.",
+      "objective_id": "DISP-BUILD-research",
+      "outcome": "stored",
+      "supersedes": false,
+      "dispatch_id": "DISP-BUILD-research",
+      "seat": "BITS-CODEGEN",
+      "domain": "engineering",
+      "source_type": "seat_dispatch",
+      "tags": [
+        "DISP-BUILD-research",
+        "BITS-CODEGEN",
+        "SRS-CN-RESEARCH-BUILD-001",
+        "build-repair"
+      ],
+      "tenant_id": null
+    },
+    {
+      "type": "A",
+      "file_path": ".bits/out/DISP-BUILD-research/memory.json",
+      "cket_stage": "11_COMMIT",
+      "srs_codes": [
+        "SRS-CN-RESEARCH-BUILD-001"
+      ],
+      "enum_type": "ConfigDoc",
+      "functions": [],
+      "dependencies": [
+        ".bits/out/DISP-BUILD-research/report.md"
+      ],
+      "lines": 1684,
+      "caps_grade": "pending",
+      "ck_stamp": "pending",
+      "intent_statement": "Preserve build-repair file intent, dependencies and verified test outcomes for dispatch ingestion.",
+      "objective_id": "DISP-BUILD-research",
+      "outcome": "stored",
+      "supersedes": false,
+      "dispatch_id": "DISP-BUILD-research",
+      "seat": "BITS-CODEGEN",
+      "domain": "engineering",
+      "source_type": "seat_dispatch",
+      "tags": [
+        "DISP-BUILD-research",
+        "BITS-CODEGEN",
+        "SRS-CN-RESEARCH-BUILD-001",
+        "build-repair"
+      ],
+      "tenant_id": null
+    },
+    {
+      "type": "A",
+      "file_path": ".bits/out/DISP-BUILD-research/memory.json.cgrf.yaml",
+      "cket_stage": "11_COMMIT",
+      "srs_codes": [
+        "SRS-CN-RESEARCH-BUILD-001"
+      ],
+      "enum_type": "ConfigDoc",
+      "functions": [],
+      "dependencies": [
+        ".bits/out/DISP-BUILD-research/memory.json"
+      ],
+      "lines": 29,
+      "caps_grade": "pending",
+      "ck_stamp": "pending",
+      "intent_statement": "Describe the build-dispatch JSON memory payload without invalid JSON comments.",
+      "objective_id": "DISP-BUILD-research",
+      "outcome": "stored",
+      "supersedes": false,
+      "dispatch_id": "DISP-BUILD-research",
+      "seat": "BITS-CODEGEN",
+      "domain": "engineering",
+      "source_type": "seat_dispatch",
+      "tags": [
+        "DISP-BUILD-research",
+        "BITS-CODEGEN",
+        "SRS-CN-RESEARCH-BUILD-001",
+        "build-repair"
+      ],
+      "tenant_id": null
+    },
+    {
+      "type": "B",
+      "source": ".bits/srs/SRS-CN-RESEARCH-BUILD-001.md",
+      "target": "package.json",
+      "edge_type": "DEPENDS_ON",
+      "weight": 1.0,
+      "description": ".bits/srs/SRS-CN-RESEARCH-BUILD-001.md depends_on package.json.",
+      "dispatch_id": "DISP-BUILD-research",
+      "created_by": "BITS-CODEGEN"
+    },
+    {
+      "type": "B",
+      "source": ".bits/srs/SRS-CN-RESEARCH-BUILD-001.md",
+      "target": ".github/workflows/build-provenance.yml",
+      "edge_type": "DEPENDS_ON",
+      "weight": 1.0,
+      "description": ".bits/srs/SRS-CN-RESEARCH-BUILD-001.md depends_on .github/workflows/build-provenance.yml.",
+      "dispatch_id": "DISP-BUILD-research",
+      "created_by": "BITS-CODEGEN"
+    },
+    {
+      "type": "B",
+      "source": ".bits/queue/DISP-BUILD-research.md",
+      "target": ".bits/srs/SRS-CN-RESEARCH-BUILD-001.md",
+      "edge_type": "DEPENDS_ON",
+      "weight": 1.0,
+      "description": ".bits/queue/DISP-BUILD-research.md depends_on .bits/srs/SRS-CN-RESEARCH-BUILD-001.md.",
+      "dispatch_id": "DISP-BUILD-research",
+      "created_by": "BITS-CODEGEN"
+    },
+    {
+      "type": "B",
+      "source": "package.json",
+      "target": "tsconfig.json",
+      "edge_type": "DEPENDS_ON",
+      "weight": 1.0,
+      "description": "package.json depends_on tsconfig.json.",
+      "dispatch_id": "DISP-BUILD-research",
+      "created_by": "BITS-CODEGEN"
+    },
+    {
+      "type": "B",
+      "source": "package.json",
+      "target": "eslint.config.mjs",
+      "edge_type": "DEPENDS_ON",
+      "weight": 1.0,
+      "description": "package.json depends_on eslint.config.mjs.",
+      "dispatch_id": "DISP-BUILD-research",
+      "created_by": "BITS-CODEGEN"
+    },
+    {
+      "type": "B",
+      "source": "package.json",
+      "target": ".nvmrc",
+      "edge_type": "DEPENDS_ON",
+      "weight": 1.0,
+      "description": "package.json depends_on .nvmrc.",
+      "dispatch_id": "DISP-BUILD-research",
+      "created_by": "BITS-CODEGEN"
+    },
+    {
+      "type": "B",
+      "source": "package.json",
+      "target": "tests/health.test.mjs",
+      "edge_type": "DEPENDS_ON",
+      "weight": 1.0,
+      "description": "package.json depends_on tests/health.test.mjs.",
+      "dispatch_id": "DISP-BUILD-research",
+      "created_by": "BITS-CODEGEN"
+    },
+    {
+      "type": "B",
+      "source": "package.json",
+      "target": "tests/build.test.mjs",
+      "edge_type": "DEPENDS_ON",
+      "weight": 1.0,
+      "description": "package.json depends_on tests/build.test.mjs.",
+      "dispatch_id": "DISP-BUILD-research",
+      "created_by": "BITS-CODEGEN"
+    },
+    {
+      "type": "B",
+      "source": "package.json.cgrf.yaml",
+      "target": "package.json",
+      "edge_type": "DEPENDS_ON",
+      "weight": 1.0,
+      "description": "package.json.cgrf.yaml depends_on package.json.",
+      "dispatch_id": "DISP-BUILD-research",
+      "created_by": "BITS-CODEGEN"
+    },
+    {
+      "type": "B",
+      "source": ".nvmrc",
+      "target": "package.json",
+      "edge_type": "DEPENDS_ON",
+      "weight": 1.0,
+      "description": ".nvmrc depends_on package.json.",
+      "dispatch_id": "DISP-BUILD-research",
+      "created_by": "BITS-CODEGEN"
+    },
+    {
+      "type": "B",
+      "source": ".nvmrc.cgrf.yaml",
+      "target": ".nvmrc",
+      "edge_type": "DEPENDS_ON",
+      "weight": 1.0,
+      "description": ".nvmrc.cgrf.yaml depends_on .nvmrc.",
+      "dispatch_id": "DISP-BUILD-research",
+      "created_by": "BITS-CODEGEN"
+    },
+    {
+      "type": "B",
+      "source": "tsconfig.json",
+      "target": "package.json",
+      "edge_type": "DEPENDS_ON",
+      "weight": 1.0,
+      "description": "tsconfig.json depends_on package.json.",
+      "dispatch_id": "DISP-BUILD-research",
+      "created_by": "BITS-CODEGEN"
+    },
+    {
+      "type": "B",
+      "source": "tsconfig.json.cgrf.yaml",
+      "target": "tsconfig.json",
+      "edge_type": "DEPENDS_ON",
+      "weight": 1.0,
+      "description": "tsconfig.json.cgrf.yaml depends_on tsconfig.json.",
+      "dispatch_id": "DISP-BUILD-research",
+      "created_by": "BITS-CODEGEN"
+    },
+    {
+      "type": "B",
+      "source": "eslint.config.mjs",
+      "target": "package.json",
+      "edge_type": "DEPENDS_ON",
+      "weight": 1.0,
+      "description": "eslint.config.mjs depends_on package.json.",
+      "dispatch_id": "DISP-BUILD-research",
+      "created_by": "BITS-CODEGEN"
+    },
+    {
+      "type": "B",
+      "source": ".gitignore",
+      "target": "package.json",
+      "edge_type": "DEPENDS_ON",
+      "weight": 1.0,
+      "description": ".gitignore depends_on package.json.",
+      "dispatch_id": "DISP-BUILD-research",
+      "created_by": "BITS-CODEGEN"
+    },
+    {
+      "type": "B",
+      "source": ".dockerignore",
+      "target": "docker/Dockerfile",
+      "edge_type": "DEPENDS_ON",
+      "weight": 1.0,
+      "description": ".dockerignore depends_on docker/Dockerfile.",
+      "dispatch_id": "DISP-BUILD-research",
+      "created_by": "BITS-CODEGEN"
+    },
+    {
+      "type": "B",
+      "source": "tests/health.test.mjs",
+      "target": "src/routes/health.ts",
+      "edge_type": "DEPENDS_ON",
+      "weight": 1.0,
+      "description": "tests/health.test.mjs depends_on src/routes/health.ts.",
+      "dispatch_id": "DISP-BUILD-research",
+      "created_by": "BITS-CODEGEN"
+    },
+    {
+      "type": "B",
+      "source": "tests/health.test.mjs",
+      "target": "package.json",
+      "edge_type": "DEPENDS_ON",
+      "weight": 1.0,
+      "description": "tests/health.test.mjs depends_on package.json.",
+      "dispatch_id": "DISP-BUILD-research",
+      "created_by": "BITS-CODEGEN"
+    },
+    {
+      "type": "B",
+      "source": "tests/build.test.mjs",
+      "target": "package.json",
+      "edge_type": "DEPENDS_ON",
+      "weight": 1.0,
+      "description": "tests/build.test.mjs depends_on package.json.",
+      "dispatch_id": "DISP-BUILD-research",
+      "created_by": "BITS-CODEGEN"
+    },
+    {
+      "type": "B",
+      "source": ".bits/checks/test_build.py",
+      "target": "package.json",
+      "edge_type": "DEPENDS_ON",
+      "weight": 1.0,
+      "description": ".bits/checks/test_build.py depends_on package.json.",
+      "dispatch_id": "DISP-BUILD-research",
+      "created_by": "BITS-CODEGEN"
+    },
+    {
+      "type": "B",
+      "source": ".bits/checks/test_build.py",
+      "target": "tsconfig.json",
+      "edge_type": "DEPENDS_ON",
+      "weight": 1.0,
+      "description": ".bits/checks/test_build.py depends_on tsconfig.json.",
+      "dispatch_id": "DISP-BUILD-research",
+      "created_by": "BITS-CODEGEN"
+    },
+    {
+      "type": "B",
+      "source": ".bits/checks/test_build.py",
+      "target": ".nvmrc",
+      "edge_type": "DEPENDS_ON",
+      "weight": 1.0,
+      "description": ".bits/checks/test_build.py depends_on .nvmrc.",
+      "dispatch_id": "DISP-BUILD-research",
+      "created_by": "BITS-CODEGEN"
+    },
+    {
+      "type": "B",
+      "source": ".bits/checks/test_build.py",
+      "target": ".github/workflows/ci.yml",
+      "edge_type": "DEPENDS_ON",
+      "weight": 1.0,
+      "description": ".bits/checks/test_build.py depends_on .github/workflows/ci.yml.",
+      "dispatch_id": "DISP-BUILD-research",
+      "created_by": "BITS-CODEGEN"
+    },
+    {
+      "type": "B",
+      "source": ".bits/checks/test_build.py",
+      "target": ".github/workflows/release.yml",
+      "edge_type": "DEPENDS_ON",
+      "weight": 1.0,
+      "description": ".bits/checks/test_build.py depends_on .github/workflows/release.yml.",
+      "dispatch_id": "DISP-BUILD-research",
+      "created_by": "BITS-CODEGEN"
+    },
+    {
+      "type": "B",
+      "source": ".bits/checks/test_build.py",
+      "target": ".github/workflows/security-scan.yml",
+      "edge_type": "DEPENDS_ON",
+      "weight": 1.0,
+      "description": ".bits/checks/test_build.py depends_on .github/workflows/security-scan.yml.",
+      "dispatch_id": "DISP-BUILD-research",
+      "created_by": "BITS-CODEGEN"
+    },
+    {
+      "type": "B",
+      "source": ".bits/checks/test_build.py",
+      "target": ".github/workflows/build-provenance.yml",
+      "edge_type": "DEPENDS_ON",
+      "weight": 1.0,
+      "description": ".bits/checks/test_build.py depends_on .github/workflows/build-provenance.yml.",
+      "dispatch_id": "DISP-BUILD-research",
+      "created_by": "BITS-CODEGEN"
+    },
+    {
+      "type": "B",
+      "source": ".github/BUILD.md",
+      "target": "package.json",
+      "edge_type": "DEPENDS_ON",
+      "weight": 1.0,
+      "description": ".github/BUILD.md depends_on package.json.",
+      "dispatch_id": "DISP-BUILD-research",
+      "created_by": "BITS-CODEGEN"
+    },
+    {
+      "type": "B",
+      "source": ".github/BUILD.md",
+      "target": ".nvmrc",
+      "edge_type": "DEPENDS_ON",
+      "weight": 1.0,
+      "description": ".github/BUILD.md depends_on .nvmrc.",
+      "dispatch_id": "DISP-BUILD-research",
+      "created_by": "BITS-CODEGEN"
+    },
+    {
+      "type": "B",
+      "source": ".github/BUILD.md",
+      "target": "tsconfig.json",
+      "edge_type": "DEPENDS_ON",
+      "weight": 1.0,
+      "description": ".github/BUILD.md depends_on tsconfig.json.",
+      "dispatch_id": "DISP-BUILD-research",
+      "created_by": "BITS-CODEGEN"
+    },
+    {
+      "type": "B",
+      "source": ".github/BUILD.md",
+      "target": ".github/PROVENANCE.md",
+      "edge_type": "DEPENDS_ON",
+      "weight": 1.0,
+      "description": ".github/BUILD.md depends_on .github/PROVENANCE.md.",
+      "dispatch_id": "DISP-BUILD-research",
+      "created_by": "BITS-CODEGEN"
+    },
+    {
+      "type": "B",
+      "source": ".github/BUILD.md",
+      "target": ".bits/queue/DISP-BUILD-research.md",
+      "edge_type": "DEPENDS_ON",
+      "weight": 1.0,
+      "description": ".github/BUILD.md depends_on .bits/queue/DISP-BUILD-research.md.",
+      "dispatch_id": "DISP-BUILD-research",
+      "created_by": "BITS-CODEGEN"
+    },
+    {
+      "type": "B",
+      "source": "AGENTS.md",
+      "target": ".bits/queue/DISP-BUILD-research.md",
+      "edge_type": "DEPENDS_ON",
+      "weight": 1.0,
+      "description": "AGENTS.md depends_on .bits/queue/DISP-BUILD-research.md.",
+      "dispatch_id": "DISP-BUILD-research",
+      "created_by": "BITS-CODEGEN"
+    },
+    {
+      "type": "B",
+      "source": "CLAUDE.md",
+      "target": "AGENTS.md",
+      "edge_type": "DEPENDS_ON",
+      "weight": 1.0,
+      "description": "CLAUDE.md depends_on AGENTS.md.",
+      "dispatch_id": "DISP-BUILD-research",
+      "created_by": "BITS-CODEGEN"
+    },
+    {
+      "type": "B",
+      "source": ".bits/context.md",
+      "target": ".bits/queue/DISP-BUILD-research.md",
+      "edge_type": "DEPENDS_ON",
+      "weight": 1.0,
+      "description": ".bits/context.md depends_on .bits/queue/DISP-BUILD-research.md.",
+      "dispatch_id": "DISP-BUILD-research",
+      "created_by": "BITS-CODEGEN"
+    },
+    {
+      "type": "B",
+      "source": ".bits/srs_registry.yml",
+      "target": ".bits/srs/SRS-CN-RESEARCH-BUILD-001.md",
+      "edge_type": "DEPENDS_ON",
+      "weight": 1.0,
+      "description": ".bits/srs_registry.yml depends_on .bits/srs/SRS-CN-RESEARCH-BUILD-001.md.",
+      "dispatch_id": "DISP-BUILD-research",
+      "created_by": "BITS-CODEGEN"
+    },
+    {
+      "type": "B",
+      "source": ".bits/srs_registry.yml",
+      "target": ".bits/srs/SRS-CN-RESEARCH-GOVERNANCE-001.md",
+      "edge_type": "DEPENDS_ON",
+      "weight": 1.0,
+      "description": ".bits/srs_registry.yml depends_on .bits/srs/SRS-CN-RESEARCH-GOVERNANCE-001.md.",
+      "dispatch_id": "DISP-BUILD-research",
+      "created_by": "BITS-CODEGEN"
+    },
+    {
+      "type": "B",
+      "source": ".bits/checks/test_governance.py",
+      "target": ".github/workflows/build-provenance.yml",
+      "edge_type": "DEPENDS_ON",
+      "weight": 1.0,
+      "description": ".bits/checks/test_governance.py depends_on .github/workflows/build-provenance.yml.",
+      "dispatch_id": "DISP-BUILD-research",
+      "created_by": "BITS-CODEGEN"
+    },
+    {
+      "type": "B",
+      "source": ".bits/checks/test_governance.py",
+      "target": ".github/CODEOWNERS",
+      "edge_type": "DEPENDS_ON",
+      "weight": 1.0,
+      "description": ".bits/checks/test_governance.py depends_on .github/CODEOWNERS.",
+      "dispatch_id": "DISP-BUILD-research",
+      "created_by": "BITS-CODEGEN"
+    },
+    {
+      "type": "B",
+      "source": ".bits/checks/test_governance.py",
+      "target": ".bits/srs_registry.yml",
+      "edge_type": "DEPENDS_ON",
+      "weight": 1.0,
+      "description": ".bits/checks/test_governance.py depends_on .bits/srs_registry.yml.",
+      "dispatch_id": "DISP-BUILD-research",
+      "created_by": "BITS-CODEGEN"
+    },
+    {
+      "type": "B",
+      "source": ".github/BRANCH_PROTECTION.md",
+      "target": ".github/CODEOWNERS",
+      "edge_type": "DEPENDS_ON",
+      "weight": 1.0,
+      "description": ".github/BRANCH_PROTECTION.md depends_on .github/CODEOWNERS.",
+      "dispatch_id": "DISP-BUILD-research",
+      "created_by": "BITS-CODEGEN"
+    },
+    {
+      "type": "B",
+      "source": ".github/BRANCH_PROTECTION.md",
+      "target": ".github/workflows/build-provenance.yml",
+      "edge_type": "DEPENDS_ON",
+      "weight": 1.0,
+      "description": ".github/BRANCH_PROTECTION.md depends_on .github/workflows/build-provenance.yml.",
+      "dispatch_id": "DISP-BUILD-research",
+      "created_by": "BITS-CODEGEN"
+    },
+    {
+      "type": "B",
+      "source": ".github/BRANCH_PROTECTION.md",
+      "target": ".github/BUILD.md",
+      "edge_type": "DEPENDS_ON",
+      "weight": 1.0,
+      "description": ".github/BRANCH_PROTECTION.md depends_on .github/BUILD.md.",
+      "dispatch_id": "DISP-BUILD-research",
+      "created_by": "BITS-CODEGEN"
+    },
+    {
+      "type": "B",
+      "source": ".github/PROVENANCE.md",
+      "target": ".github/workflows/build-provenance.yml",
+      "edge_type": "DEPENDS_ON",
+      "weight": 1.0,
+      "description": ".github/PROVENANCE.md depends_on .github/workflows/build-provenance.yml.",
+      "dispatch_id": "DISP-BUILD-research",
+      "created_by": "BITS-CODEGEN"
+    },
+    {
+      "type": "B",
+      "source": ".github/PROVENANCE.md",
+      "target": ".github/BUILD.md",
+      "edge_type": "DEPENDS_ON",
+      "weight": 1.0,
+      "description": ".github/PROVENANCE.md depends_on .github/BUILD.md.",
+      "dispatch_id": "DISP-BUILD-research",
+      "created_by": "BITS-CODEGEN"
+    },
+    {
+      "type": "B",
+      "source": ".github/workflows/build-provenance.yml",
+      "target": "package.json",
+      "edge_type": "DEPENDS_ON",
+      "weight": 1.0,
+      "description": ".github/workflows/build-provenance.yml depends_on package.json.",
+      "dispatch_id": "DISP-BUILD-research",
+      "created_by": "BITS-CODEGEN"
+    },
+    {
+      "type": "B",
+      "source": ".github/workflows/build-provenance.yml",
+      "target": ".nvmrc",
+      "edge_type": "DEPENDS_ON",
+      "weight": 1.0,
+      "description": ".github/workflows/build-provenance.yml depends_on .nvmrc.",
+      "dispatch_id": "DISP-BUILD-research",
+      "created_by": "BITS-CODEGEN"
+    },
+    {
+      "type": "B",
+      "source": ".github/workflows/build-provenance.yml",
+      "target": ".bits/checks/test_governance.py",
+      "edge_type": "DEPENDS_ON",
+      "weight": 1.0,
+      "description": ".github/workflows/build-provenance.yml depends_on .bits/checks/test_governance.py.",
+      "dispatch_id": "DISP-BUILD-research",
+      "created_by": "BITS-CODEGEN"
+    },
+    {
+      "type": "B",
+      "source": ".github/workflows/build-provenance.yml",
+      "target": ".bits/checks/test_build.py",
+      "edge_type": "DEPENDS_ON",
+      "weight": 1.0,
+      "description": ".github/workflows/build-provenance.yml depends_on .bits/checks/test_build.py.",
+      "dispatch_id": "DISP-BUILD-research",
+      "created_by": "BITS-CODEGEN"
+    },
+    {
+      "type": "B",
+      "source": ".github/workflows/ci.yml",
+      "target": "package.json",
+      "edge_type": "DEPENDS_ON",
+      "weight": 1.0,
+      "description": ".github/workflows/ci.yml depends_on package.json.",
+      "dispatch_id": "DISP-BUILD-research",
+      "created_by": "BITS-CODEGEN"
+    },
+    {
+      "type": "B",
+      "source": ".github/workflows/ci.yml",
+      "target": ".nvmrc",
+      "edge_type": "DEPENDS_ON",
+      "weight": 1.0,
+      "description": ".github/workflows/ci.yml depends_on .nvmrc.",
+      "dispatch_id": "DISP-BUILD-research",
+      "created_by": "BITS-CODEGEN"
+    },
+    {
+      "type": "B",
+      "source": ".github/workflows/ci.yml",
+      "target": "docker/Dockerfile",
+      "edge_type": "DEPENDS_ON",
+      "weight": 1.0,
+      "description": ".github/workflows/ci.yml depends_on docker/Dockerfile.",
+      "dispatch_id": "DISP-BUILD-research",
+      "created_by": "BITS-CODEGEN"
+    },
+    {
+      "type": "B",
+      "source": ".github/workflows/release.yml",
+      "target": "package.json",
+      "edge_type": "DEPENDS_ON",
+      "weight": 1.0,
+      "description": ".github/workflows/release.yml depends_on package.json.",
+      "dispatch_id": "DISP-BUILD-research",
+      "created_by": "BITS-CODEGEN"
+    },
+    {
+      "type": "B",
+      "source": ".github/workflows/release.yml",
+      "target": ".nvmrc",
+      "edge_type": "DEPENDS_ON",
+      "weight": 1.0,
+      "description": ".github/workflows/release.yml depends_on .nvmrc.",
+      "dispatch_id": "DISP-BUILD-research",
+      "created_by": "BITS-CODEGEN"
+    },
+    {
+      "type": "B",
+      "source": ".github/workflows/security-scan.yml",
+      "target": ".nvmrc",
+      "edge_type": "DEPENDS_ON",
+      "weight": 1.0,
+      "description": ".github/workflows/security-scan.yml depends_on .nvmrc.",
+      "dispatch_id": "DISP-BUILD-research",
+      "created_by": "BITS-CODEGEN"
+    },
+    {
+      "type": "B",
+      "source": "docker/Dockerfile",
+      "target": "package.json",
+      "edge_type": "DEPENDS_ON",
+      "weight": 1.0,
+      "description": "docker/Dockerfile depends_on package.json.",
+      "dispatch_id": "DISP-BUILD-research",
+      "created_by": "BITS-CODEGEN"
+    },
+    {
+      "type": "B",
+      "source": "docker/Dockerfile",
+      "target": ".nvmrc",
+      "edge_type": "DEPENDS_ON",
+      "weight": 1.0,
+      "description": "docker/Dockerfile depends_on .nvmrc.",
+      "dispatch_id": "DISP-BUILD-research",
+      "created_by": "BITS-CODEGEN"
+    },
+    {
+      "type": "B",
+      "source": "README.md",
+      "target": ".github/BUILD.md",
+      "edge_type": "DEPENDS_ON",
+      "weight": 1.0,
+      "description": "README.md depends_on .github/BUILD.md.",
+      "dispatch_id": "DISP-BUILD-research",
+      "created_by": "BITS-CODEGEN"
+    },
+    {
+      "type": "B",
+      "source": ".bits/out/DISP-BUILD-research/report.md",
+      "target": ".bits/checks/test_build.py",
+      "edge_type": "DEPENDS_ON",
+      "weight": 1.0,
+      "description": ".bits/out/DISP-BUILD-research/report.md depends_on .bits/checks/test_build.py.",
+      "dispatch_id": "DISP-BUILD-research",
+      "created_by": "BITS-CODEGEN"
+    },
+    {
+      "type": "B",
+      "source": ".bits/out/DISP-BUILD-research/report.md",
+      "target": ".github/BUILD.md",
+      "edge_type": "DEPENDS_ON",
+      "weight": 1.0,
+      "description": ".bits/out/DISP-BUILD-research/report.md depends_on .github/BUILD.md.",
+      "dispatch_id": "DISP-BUILD-research",
+      "created_by": "BITS-CODEGEN"
+    },
+    {
+      "type": "B",
+      "source": ".bits/out/DISP-BUILD-research/report.md",
+      "target": ".bits/out/DISP-BUILD-research/memory.json",
+      "edge_type": "DEPENDS_ON",
+      "weight": 1.0,
+      "description": ".bits/out/DISP-BUILD-research/report.md depends_on .bits/out/DISP-BUILD-research/memory.json.",
+      "dispatch_id": "DISP-BUILD-research",
+      "created_by": "BITS-CODEGEN"
+    },
+    {
+      "type": "B",
+      "source": ".bits/out/DISP-BUILD-research/memory.json",
+      "target": ".bits/out/DISP-BUILD-research/report.md",
+      "edge_type": "DEPENDS_ON",
+      "weight": 1.0,
+      "description": ".bits/out/DISP-BUILD-research/memory.json depends_on .bits/out/DISP-BUILD-research/report.md.",
+      "dispatch_id": "DISP-BUILD-research",
+      "created_by": "BITS-CODEGEN"
+    },
+    {
+      "type": "B",
+      "source": ".bits/out/DISP-BUILD-research/memory.json.cgrf.yaml",
+      "target": ".bits/out/DISP-BUILD-research/memory.json",
+      "edge_type": "DEPENDS_ON",
+      "weight": 1.0,
+      "description": ".bits/out/DISP-BUILD-research/memory.json.cgrf.yaml depends_on .bits/out/DISP-BUILD-research/memory.json.",
+      "dispatch_id": "DISP-BUILD-research",
+      "created_by": "BITS-CODEGEN"
+    },
+    {
+      "type": "C",
+      "event_type": "failure",
+      "file_path": "package.json",
+      "description": "Offline real lockfile generation failed with ENOTCACHED for the SDK; npm ci failed because no lockfile exists. No synthetic dependency metadata was added.",
+      "caps_before": null,
+      "caps_after": null,
+      "dag_impact": null,
+      "dispatch_id": "DISP-BUILD-research",
+      "timestamp": "2026-10-20T17:59:26.272348+00:00",
+      "commit_sha": null,
+      "smoke_result": null
+    },
+    {
+      "type": "C",
+      "event_type": "test_fail",
+      "file_path": "tsconfig.json",
+      "description": "Strict typecheck and build failed because Node types, NATS and SDK are unavailable. The failed build produced no dist artifact. Python strict mypy is blocked by missing PyYAML stubs.",
+      "caps_before": null,
+      "caps_after": null,
+      "dag_impact": null,
+      "dispatch_id": "DISP-BUILD-research",
+      "timestamp": "2026-10-20T17:59:26.272348+00:00",
+      "commit_sha": null,
+      "smoke_result": null
+    },
+    {
+      "type": "C",
+      "event_type": "test_pass",
+      "file_path": "tests/build.test.mjs",
+      "description": "Fixed the initial lint URL-global error with an explicit node:url import; lint passes using preinstalled sandbox tools. Five Node tests pass and loaded health.ts coverage is 100%.",
+      "caps_before": null,
+      "caps_after": null,
+      "dag_impact": null,
+      "dispatch_id": "DISP-BUILD-research",
+      "timestamp": "2026-10-20T17:59:26.272348+00:00",
+      "commit_sha": null,
+      "smoke_result": "5/5"
+    },
+    {
+      "type": "C",
+      "event_type": "smoke_run",
+      "file_path": ".bits/checks/test_build.py",
+      "description": "All sixteen governance/build policy checks pass; twenty-three workflow shell steps pass syntax validation. Live CI, Docker and signing were not run.",
+      "caps_before": null,
+      "caps_after": null,
+      "dag_impact": null,
+      "dispatch_id": "DISP-BUILD-research",
+      "timestamp": "2026-10-20T17:59:26.272348+00:00",
+      "commit_sha": null,
+      "smoke_result": "16/16"
+    }
+  ],
+  "summary": {
+    "type_a_count": 31,
+    "type_b_count": 62,
+    "type_c_count": 4,
+    "ioo_compliance": true,
+    "dkg_orphans": 0,
+    "dispatch_id": "DISP-BUILD-research",
+    "srs_codes": [
+      "SRS-CN-RESEARCH-BUILD-001"
+    ],
+    "seat": "BITS-CODEGEN"
+  }
+}

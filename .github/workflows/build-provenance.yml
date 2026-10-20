@@ -1,19 +1,17 @@
-# ─── CGRF Header ───────────────────────────────────────────────
-# File:        .github/workflows/build-provenance.yml
-# Stage:       11_COMMIT
-# SRS:         SRS-CN-RESEARCH-GOVERNANCE-001
-# CAPS:        pending
-# CK:          pending
-# Dispatch:    DISP-GOVERNANCE-research
-# Seat:        BITS-CODEGEN
-# Owner:       Citadel Nexus Inc.
-# Created:     2026-10-20
-# Depends:     package.json, .bits/checks/test_governance.py
-# EnumType:    Workflow
-# EnumEdges:   DEPENDS_ON package.json; DEPENDS_ON .bits/checks/test_governance.py
-# DAG Node:    none
-# Intent:      Bind compiled Research archives to trusted main builds using keyless signed provenance.
-# ───────────────────────────────────────────────────────────────
+# File: .github/workflows/build-provenance.yml
+# Stage: 11_COMMIT
+# SRS: SRS-CN-RESEARCH-BUILD-001
+# CAPS: pending
+# CK: pending
+# Dispatch: DISP-BUILD-research
+# Seat: BITS-CODEGEN
+# Owner: Citadel Nexus Inc.
+# Created: 2026-10-20
+# Depends: package.json, .nvmrc, .bits/checks/test_governance.py, .bits/checks/test_build.py
+# EnumType: Workflow
+# EnumEdges: DEPENDS_ON package.json; DEPENDS_ON .nvmrc; DEPENDS_ON .bits/checks/test_governance.py; DEPENDS_ON .bits/checks/test_build.py
+# DAG Node: none
+# Intent: Require pinned build gates before signing the actual compiled archive and dependency lockfile.
 
 name: Build provenance
 
@@ -32,10 +30,10 @@ jobs:
     name: Governance checks
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v5
         with:
           persist-credentials: false
-      - uses: actions/setup-python@v5
+      - uses: actions/setup-python@v6
         with:
           python-version: '3.11'
       - run: python -m pip install PyYAML==6.0.3
@@ -46,12 +44,12 @@ jobs:
     if: github.event_name != 'workflow_dispatch' || github.ref == 'refs/heads/main'
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v5
         with:
           persist-credentials: false
-      - uses: actions/setup-node@v4
+      - uses: actions/setup-node@v5
         with:
-          node-version: '20'
+          node-version-file: .nvmrc
       - name: Require reproducible build inputs
         run: |
           if [ ! -f package-lock.json ] || [ ! -f tsconfig.json ]; then
@@ -60,6 +58,7 @@ jobs:
           fi
       - run: npm ci
       - run: npm run lint
+      - run: npm run typecheck
       - run: npm test
       - run: npm run build
       - name: Archive compiled output
@@ -68,9 +67,9 @@ jobs:
         run: |
           test -s dist/index.js
           mkdir -p artifact
-          tar -czf "artifact/$ARTIFACT_NAME" package.json dist
+          tar -czf "artifact/$ARTIFACT_NAME" package.json package-lock.json dist
       - name: Upload build for this run
-        uses: actions/upload-artifact@v4
+        uses: actions/upload-artifact@v5
         with:
           name: research-build-${{ github.sha }}
           path: artifact/research-build-${{ github.sha }}.tar.gz
@@ -92,7 +91,7 @@ jobs:
     steps:
       # No checkout or repository scripts in the signing job.
       # Download defaults to this workflow run; never take an artifact from a PR run.
-      - uses: actions/download-artifact@v4
+      - uses: actions/download-artifact@v5
         with:
           name: research-build-${{ github.sha }}
           path: signed
@@ -119,7 +118,7 @@ jobs:
             --predicate-type https://slsa.dev/provenance/v1 \
             --deny-self-hosted-runners
       - name: Upload verified archive and signature bundle
-        uses: actions/upload-artifact@v4
+        uses: actions/upload-artifact@v5
         with:
           name: signed-research-build-${{ github.sha }}
           path: |

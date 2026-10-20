@@ -1,3 +1,18 @@
+# File: .github/workflows/release.yml
+# Stage: 11_COMMIT
+# SRS: SRS-CN-RESEARCH-BUILD-001
+# CAPS: pending
+# CK: pending
+# Dispatch: DISP-BUILD-research
+# Seat: BITS-CODEGEN
+# Owner: Citadel Nexus Inc.
+# Created: 2026-10-20
+# Depends: package.json, .nvmrc
+# EnumType: Workflow
+# EnumEdges: DEPENDS_ON package.json; DEPENDS_ON .nvmrc
+# DAG Node: none
+# Intent: Require lint and typechecking before existing release publication on the pinned runtime.
+
 name: Release - guild-research
 on:
   push:
@@ -10,13 +25,15 @@ jobs:
       contents: write
       packages: write
     steps:
-      - uses: actions/checkout@v4
-      - uses: actions/setup-node@v4
+      - uses: actions/checkout@v5
+      - uses: actions/setup-node@v5
         with:
-          node-version: 20
+          node-version-file: .nvmrc
           registry-url: 'https://npm.pkg.github.com'
           scope: '@citadel-guilds'
       - run: npm ci
+      - run: npm run lint
+      - run: npm run typecheck
       - run: npm test
       - run: npm run build
       - run: npm publish

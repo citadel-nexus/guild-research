@@ -4,13 +4,28 @@
   "type": "module",
   "main": "dist/index.js",
   "scripts": {
-    "build": "tsc",
-    "dev": "tsx watch src/index.ts",
-    "test": "vitest run",
-    "lint": "eslint src/"
+    "clean": "node --input-type=module -e \"import { rmSync } from 'node:fs'; rmSync('dist', { recursive: true, force: true });\"",
+    "build": "npm run clean && tsc",
+    "typecheck": "tsc --noEmit",
+    "dev": "node --watch src/index.ts",
+    "test": "node --test --experimental-test-coverage --test-coverage-include=src/**/*.ts --test-coverage-lines=80 --test-coverage-branches=80 --test-coverage-functions=80 tests/*.test.mjs",
+    "lint": "eslint src/ tests/ eslint.config.mjs"
   },
   "dependencies": {
     "@citadel-guilds/sdk": "^0.1.0",
     "nats": "^2.19.0"
+  },
+  "engines": {
+    "node": "24.13.0",
+    "npm": "11.6.2"
+  },
+  "packageManager": "npm@11.6.2",
+  "devDependencies": {
+    "@eslint/js": "9.16.0",
+    "@types/node": "24.0.0",
+    "@typescript-eslint/eslint-plugin": "8.18.0",
+    "@typescript-eslint/parser": "8.18.0",
+    "eslint": "9.16.0",
+    "typescript": "5.7.3"
   }
 }

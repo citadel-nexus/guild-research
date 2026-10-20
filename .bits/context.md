@@ -1,39 +1,35 @@
 <!--
-# ─── CGRF Header ───────────────────────────────────────────────
-# File:        .bits/context.md
-# Stage:       11_COMMIT
-# SRS:         SRS-CN-RESEARCH-GOVERNANCE-001
-# CAPS:        pending
-# CK:          pending
-# Dispatch:    DISP-GOVERNANCE-research
-# Seat:        BITS-CODEGEN
-# Owner:       Citadel Nexus Inc.
-# Created:     2026-10-20
-# Depends:     .bits/queue/DISP-GOVERNANCE-research.md
-# EnumType:    ConfigDoc
-# EnumEdges:   DEPENDS_ON .bits/queue/DISP-GOVERNANCE-research.md
-# DAG Node:    none
-# Intent:      Record the active staging scope and known build prerequisites.
-# ───────────────────────────────────────────────────────────────
+# File: .bits/context.md
+# Stage: 11_COMMIT
+# SRS: SRS-CN-RESEARCH-BUILD-001
+# CAPS: pending
+# CK: pending
+# Dispatch: DISP-BUILD-research
+# Seat: BITS-CODEGEN
+# Owner: Citadel Nexus Inc.
+# Created: 2026-10-20
+# Depends: .bits/queue/DISP-BUILD-research.md
+# EnumType: ConfigDoc
+# EnumEdges: DEPENDS_ON .bits/queue/DISP-BUILD-research.md
+# DAG Node: none
+# Intent: Record active build-repair scope and confirmed guild ownership.
 -->
 
 # Current staging context
 
-- Active SRS: `SRS-CN-RESEARCH-GOVERNANCE-001`.
-- Dispatch: `DISP-GOVERNANCE-research`, status `in_progress`.
+- Active SRS: `SRS-CN-RESEARCH-BUILD-001`.
+- Dispatch: `DISP-BUILD-research`, status `in_progress`.
 - Seat: BITS-CODEGEN. Mode: staging. Date: 2026-10-20.
 - Authorization: authenticated operator directive recorded verbatim in the dispatch.
 - Confirmed owner: `@citadel-nexus/guild-research`; Scholar automation App:
   `scholar-research-guildmaster` (operator-confirmed through Datadog team links).
-- Deliverable: one reviewable governance/provenance PR; no external settings changes.
+- Deliverable: one separate build-repair PR; no external settings changes.
 - CKS gate: B+/75; CAPS minimum: B+; CKS, CAPS and CK: pending.
 
-Do create missing prerequisites, record ownership and approval rules, document
-branch protection, and add a build/attestation workflow with consumer verification.
-Do preserve the existing Living World registry entry and queued dispatch.
-Do not change application code, existing CI/release behavior, production, secrets,
-or external governance databases. Do not infer GitHub identities from GitLab.
+The operator authorized ten staging build-repair steps after governance PR #17.
+See the build dispatch for exact scope and commands. Preserve the Living World
+queue, code-owner rules, signing trust boundary, CodeQL and secret scanning.
 
-Known prerequisite gaps: no npm lockfile, no TypeScript or ESLint config, no
-Vitest/TypeScript development dependencies. These need a separate application
-repair dispatch. Do not disable failing build requirements to manufacture evidence.
+Repair npm dependency locking, TypeScript, ESLint, test tooling and CI. Record
+unresolved dependency access as a blocker. No fabricated package metadata,
+weakened tests, production connections, publishing or settings changes.

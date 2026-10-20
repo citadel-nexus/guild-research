@@ -1,0 +1,30 @@
+# File: tsconfig.json.cgrf.yaml
+# Stage: 11_COMMIT
+# SRS: SRS-CN-RESEARCH-BUILD-001
+# CAPS: pending
+# CK: pending
+# Dispatch: DISP-BUILD-research
+# Seat: BITS-CODEGEN
+# Owner: Citadel Nexus Inc.
+# Created: 2026-10-20
+# Depends: tsconfig.json
+# EnumType: ConfigDoc
+# EnumEdges: DEPENDS_ON tsconfig.json
+# DAG Node: none
+# Intent: Describe governance metadata for tsconfig.json without changing its file format.
+
+File: tsconfig.json
+Stage: 11_COMMIT
+SRS: SRS-CN-RESEARCH-BUILD-001
+CAPS: pending
+CK: pending
+Dispatch: DISP-BUILD-research
+Seat: BITS-CODEGEN
+Owner: Citadel Nexus Inc.
+Created: '2026-10-20'
+Depends: package.json
+EnumType: ConfigDoc
+EnumEdges: DEPENDS_ON package.json
+DAG Node: none
+Intent: Typecheck all Research source strictly and emit compiled output only when
+  the build is valid.

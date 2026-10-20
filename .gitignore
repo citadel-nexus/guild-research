@@ -1,0 +1,23 @@
+# File: .gitignore
+# Stage: 11_COMMIT
+# SRS: SRS-CN-RESEARCH-BUILD-001
+# CAPS: pending
+# CK: pending
+# Dispatch: DISP-BUILD-research
+# Seat: BITS-CODEGEN
+# Owner: Citadel Nexus Inc.
+# Created: 2026-10-20
+# Depends: package.json
+# EnumType: ConfigDoc
+# EnumEdges: DEPENDS_ON package.json
+# DAG Node: none
+# Intent: Keep installed dependencies, build output and local secrets out of review.
+
+node_modules/
+dist/
+coverage/
+__pycache__/
+*.pyc
+.env
+.env.*
+!.env.example
