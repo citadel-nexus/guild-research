@@ -23,6 +23,8 @@
 - Dispatch: `DISP-GOVERNANCE-research`, status `in_progress`.
 - Seat: BITS-CODEGEN. Mode: staging. Date: 2026-10-20.
 - Authorization: authenticated operator directive recorded verbatim in the dispatch.
+- Confirmed owner: `@citadel-nexus/guild-research`; Scholar automation App:
+  `scholar-research-guildmaster` (operator-confirmed through Datadog team links).
 - Deliverable: one reviewable governance/provenance PR; no external settings changes.
 - CKS gate: B+/75; CAPS minimum: B+; CKS, CAPS and CK: pending.
 

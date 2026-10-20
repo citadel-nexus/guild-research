@@ -45,9 +45,11 @@ CKET: 04_HYPOTHESIZE, 11_COMMIT (logical mapping in AGENTS.md)
 
 ### Task B — Ownership and approval policy
 
-Status: PASS (GitHub identity/admin enforcement pending)
-Output: Scholar named as guildmaster, all paths assigned to the existing Research
-leads team, with charter and administrator-owned default-branch requirements.
+Status: PASS (identities operator-confirmed; admin enforcement pending)
+Output: Scholar named as guildmaster, all paths assigned to the confirmed owner
+team `@citadel-nexus/guild-research`, with `scholar-research-guildmaster` recorded
+as Scholar's automation App and expected actor. Identity confirmation is complete;
+charter and administrator-owned default-branch requirements remain in effect.
 Verify: `python .bits/checks/test_governance.py OwnershipTests -v`
 Files: GOVERNANCE.md, .github/CODEOWNERS, .github/BRANCH_PROTECTION.md
 CKET: 06_PLAN
@@ -65,7 +67,8 @@ CKET: 11_COMMIT, 06_PLAN
 ## §3 SMOKE TEST RESULTS
 
 Run `python -m unittest discover -s .bits/checks -p 'test_*.py' -v`.
-Expected and actual: all 10 checks pass. No smoke failures.
+Expected and actual: all 10 checks pass. No smoke failures. The suite was rerun
+after applying the operator-confirmed owner team and automation identity.
 
 | Check | Expected and actual | Result |
 |---|---|---|
@@ -105,7 +108,7 @@ GitHub review routing, settings enforcement and Sigstore signing remain untested
 
 Type A count: 15
 Type B count: 22
-Type C count: 3
+Type C count: 4
 IOO compliance: true
 DKG orphans: 0
 Payload: .bits/out/DISP-GOVERNANCE-research/memory.json
@@ -141,9 +144,9 @@ local repository conventions were used. No cross-repository reads occurred.
 
 ## §7 NEXT ACTIONS
 
-Blockers: application scaffold lacks lockfile/config/toolchain; Scholar's GitHub
-mapping and team access are unverified; ruleset and Actions permissions need admin
-activation; a trusted GitHub run is required for live attestation verification.
+Blockers: application scaffold lacks lockfile/config/toolchain; owner-team access
+and ruleset/Actions permissions need administrator activation. Identity confirmation
+is complete; a trusted GitHub run is required for live attestation verification.
 Handoffs requested: administrator steps in .github/BRANCH_PROTECTION.md; no private
 seat handoff created because no private-stack work was performed.
 Suggested next dispatch: application build-scaffold repair (operator to assign ID).

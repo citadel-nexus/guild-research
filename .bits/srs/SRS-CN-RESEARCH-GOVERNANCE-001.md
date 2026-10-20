@@ -38,8 +38,9 @@ an administrator instead of adding an inert policy file.
 
 ## Acceptance
 
-1. CODEOWNERS names Scholar and routes every path to the existing Research leads
-   team, pending verified GitHub identity; no path silently overrides guild review.
+1. CODEOWNERS names Scholar and routes every path to the operator-confirmed
+   `@citadel-nexus/guild-research` team; no path silently overrides guild review.
+   Record `scholar-research-guildmaster` as Scholar's automation App, not a code owner.
 2. Governance defines decisions, approval and escalation to the guildmasters group.
 3. Admin instructions cover required owner reviews, signed commits, named required
    status checks, bypass restrictions and activation order on default branch `main`.
@@ -57,6 +58,6 @@ an administrator instead of adding an inert policy file.
 Application repair is outside this SRS. A missing lockfile/toolchain is a hard
 build failure, not a reason to substitute source archives or empty artifacts.
 No live signing is possible in the local sandbox. Activate protections only after
-reviewing owner identities and obtaining successful checks on GitHub. No settings
+checking owner-team access and obtaining successful checks on GitHub. No settings
 are changed here. Existing npm/container publication remains unattested by this
 new archive workflow and requires separate scope if needed.

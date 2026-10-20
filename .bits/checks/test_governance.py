@@ -70,7 +70,7 @@ class OwnershipTests(unittest.TestCase):
         owners = (ROOT / ".github/CODEOWNERS").read_text()
         rules = [line.split() for line in owners.splitlines()
                  if line.strip() and not line.startswith("#")]
-        self.assertEqual(rules, [["*", "@citadel-nexus/guild-research-leads"]])
+        self.assertEqual(rules, [["*", "@citadel-nexus/guild-research"]])
         self.assertIn("Guildmaster: Scholar", owners)
 
     def test_admin_requirements_match_pr_jobs(self) -> None:

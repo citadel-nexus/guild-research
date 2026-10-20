@@ -45,9 +45,9 @@ selected SRS, the dispatch, then its Memory Brief. Preserve unrelated dispatches
 - No production, deployment, publishing, direct pushes, GitHub settings changes,
   secrets, private-stack access, memory API writes or signing-key generation.
 - Preserve existing CI/release workflows and the unrelated Living World SRS.
-- CODEOWNERS must use verified GitHub identities; GitLab and Datadog identities
-  do not establish GitHub membership. Retain the existing Research leads team
-  until an administrator confirms Scholar's GitHub identity and write access.
+- CODEOWNERS uses the operator-confirmed team `@citadel-nexus/guild-research`.
+  Scholar's automation identity is the `scholar-research-guildmaster` GitHub App.
+  Apps cannot be code owners; retain team review and existing protection rules.
 - New files carry CGRF metadata; grades and CK remain `pending`.
 - Preserve GitHub's discoverable `.github/` paths and this repo's root doc layout.
   CKET stages here are logical classifications, not extra directory prefixes:

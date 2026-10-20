@@ -40,6 +40,7 @@ in GitHub Settings → Rules → Rulesets, or equivalent branch protection:
 | Status checks | Required, including branches up to date before merge |
 | Required check contexts | `build`, `Governance checks`, `Build artifact` |
 | Expected status-check source | GitHub Actions; verify the actual contexts after first runs |
+| Expected guildmaster automation actor | `scholar-research-guildmaster` GitHub App (operator-confirmed) |
 | Force pushes and branch deletion | Block |
 | Bypass list | Empty; apply to administrators as well |
 
@@ -51,10 +52,13 @@ branch CI and release workflows are unchanged by this work.
 
 ## Administrator activation order
 
-1. Confirm the Research leads team's existence, visibility, explicit write access
-   and Scholar's GitHub membership. Review CODEOWNERS validation in GitHub. The
-   GitLab name does not prove GitHub identity. Record the guildmasters approval
-   required by the charter.
+1. Ensure the confirmed owner team `@citadel-nexus/guild-research` is visible and
+   has explicit repository write access; review CODEOWNERS validation in GitHub.
+   The operator has confirmed the team and `scholar-research-guildmaster` App
+   through the Datadog team links; no further Scholar identity confirmation is
+   required. The App is the expected guildmaster automation actor, not a code
+   owner or the source of the GitHub Actions checks listed above. Do not add it
+   to the bypass list. Record the guildmasters approval required by the charter.
 2. Have an application-scaffold dispatch supply the missing lockfile, dev tools
    and TypeScript/ESLint configuration. Existing CI already runs `npm ci`; the
    new build also refuses to proceed without a lockfile. Do not mark missing

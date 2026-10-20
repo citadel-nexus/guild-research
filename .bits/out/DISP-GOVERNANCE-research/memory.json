@@ -74,7 +74,7 @@
       "dependencies": [
         ".bits/queue/DISP-GOVERNANCE-research.md"
       ],
-      "lines": 37,
+      "lines": 39,
       "caps_grade": "pending",
       "ck_stamp": "pending",
       "intent_statement": "Record the active staging scope and known build prerequisites.",
@@ -137,7 +137,7 @@
         "GOVERNANCE.md",
         ".github/workflows/build-provenance.yml"
       ],
-      "lines": 62,
+      "lines": 63,
       "caps_grade": "pending",
       "ck_stamp": "pending",
       "intent_statement": "Specify reviewable ownership and digest-bound provenance for Research artifacts.",
@@ -168,7 +168,7 @@
       "dependencies": [
         ".bits/srs/SRS-CN-RESEARCH-GOVERNANCE-001.md"
       ],
-      "lines": 85,
+      "lines": 99,
       "caps_grade": "pending",
       "ck_stamp": "pending",
       "intent_statement": "Record the operator directive and bounded staging tasks as a local dispatch.",
@@ -202,7 +202,7 @@
       "lines": 25,
       "caps_grade": "pending",
       "ck_stamp": "pending",
-      "intent_statement": "Route every Research change to guildmaster review through the existing owner team.",
+      "intent_statement": "Route every Research change to guildmaster review through the confirmed owner team.",
       "objective_id": "DISP-GOVERNANCE-research",
       "outcome": "stored",
       "supersedes": false,
@@ -231,7 +231,7 @@
         ".github/BRANCH_PROTECTION.md",
         ".github/PROVENANCE.md"
       ],
-      "lines": 81,
+      "lines": 85,
       "caps_grade": "pending",
       "ck_stamp": "pending",
       "intent_statement": "Define Research stewardship, review authority and cross-guild escalation.",
@@ -263,7 +263,7 @@
         ".github/CODEOWNERS",
         ".github/workflows/build-provenance.yml"
       ],
-      "lines": 91,
+      "lines": 95,
       "caps_grade": "pending",
       "ck_stamp": "pending",
       "intent_statement": "Specify administrator-owned enforcement without pretending repository files apply settings.",
@@ -393,7 +393,7 @@
         ".bits/checks/test_governance.py",
         ".bits/out/DISP-GOVERNANCE-research/memory.json"
       ],
-      "lines": 153,
+      "lines": 156,
       "caps_grade": "pending",
       "ck_stamp": "pending",
       "intent_statement": "Record implementation evidence and separate pending GitHub activation from local completion.",
@@ -424,7 +424,7 @@
       "dependencies": [
         ".bits/out/DISP-GOVERNANCE-research/report.md"
       ],
-      "lines": 749,
+      "lines": 762,
       "caps_grade": "pending",
       "ck_stamp": "pending",
       "intent_statement": "Preserve file intent, governance relationships and actual validation events for dispatch ingestion.",
@@ -732,12 +732,25 @@
       "timestamp": "2026-10-20T17:35:39.763597+00:00",
       "commit_sha": null,
       "smoke_result": "10/10"
+    },
+    {
+      "type": "C",
+      "event_type": "test_pass",
+      "file_path": ".github/CODEOWNERS",
+      "description": "Operator confirmed @citadel-nexus/guild-research as guildmaster owner and scholar-research-guildmaster as Scholar automation App. Ownership, charter, protection guide and dispatch records updated; all ten governance checks passed.",
+      "caps_before": null,
+      "caps_after": null,
+      "dag_impact": null,
+      "dispatch_id": "DISP-GOVERNANCE-research",
+      "timestamp": "2026-10-20T17:39:13.687524+00:00",
+      "commit_sha": null,
+      "smoke_result": "10/10"
     }
   ],
   "summary": {
     "type_a_count": 15,
     "type_b_count": 22,
-    "type_c_count": 3,
+    "type_c_count": 4,
     "ioo_compliance": true,
     "dkg_orphans": 0,
     "dispatch_id": "DISP-GOVERNANCE-research",

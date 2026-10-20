@@ -53,6 +53,20 @@
 This creates a local authorization record only; it does not assert external VCC
 registration, blueprint approval, or production authorization.
 
+## Operator-confirmed identity update
+
+Under the same SRS and dispatch, the authenticated operator confirmed the
+following through Datadog team `guild-research` links:
+
+- Guildmaster owner team: `@citadel-nexus/guild-research`
+  (https://github.com/orgs/citadel-nexus/teams/guild-research).
+- Scholar's automation identity: `scholar-research-guildmaster` GitHub App
+  (https://github.com/apps/scholar-research-guildmaster).
+
+The operator directs using the team in CODEOWNERS, documenting the App in the
+charter and protection guide, and removing the identity-confirmation follow-up.
+GitHub Apps cannot be code owners. No settings or access changes are authorized.
+
 ## Task table
 
 | Phase | Task | Gate |
@@ -79,7 +93,7 @@ failures separately; these do not waive the provenance build gate.
 
 The source conversation requested governance/provenance sessions for guildmasters.
 This task identifies Scholar, Research's graph/corpus/flywheel scope and Datadog
-team `guild-research`. Existing Research ownership uses the GitHub team
-`citadel-nexus/guild-research-leads`; its membership has not been verified. The
+team `guild-research`. The operator has confirmed owner team
+`@citadel-nexus/guild-research` and automation App `scholar-research-guildmaster`. The
 unrelated Living World dispatch remains queued. No external memory recall or
 VCC lookup was performed. No injected issue Memory Brief was supplied.

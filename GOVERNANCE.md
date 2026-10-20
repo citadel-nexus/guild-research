@@ -60,13 +60,17 @@ there is no implied emergency bypass. No unverified GitHub group handle is used.
 
 ## GitHub ownership mapping
 
-GitLab `scholar` and Datadog `guild-research` are not verified GitHub identities.
-CODEOWNERS names Scholar and uses the repository's existing
-`@citadel-nexus/guild-research-leads` team as the enforceable owner. An administrator
-must confirm that this team exists, is visible, has explicit write access, and
-includes Scholar's verified GitHub account. Until confirmed, automated review
-routing cannot be claimed as active. If direct individual ownership is required,
-replace the owner with the verified account in a reviewed follow-up change.
+The operator confirmed these identities through the Datadog `guild-research`
+team links under the existing SRS and dispatch:
+
+- Guildmaster code owner: [@citadel-nexus/guild-research](https://github.com/orgs/citadel-nexus/teams/guild-research).
+- Scholar's automation identity: the [scholar-research-guildmaster GitHub App](https://github.com/apps/scholar-research-guildmaster).
+
+CODEOWNERS assigns every path to the confirmed team. GitHub Apps cannot be code
+owners; Scholar's App performs automation and does not replace team code-owner
+approval. Identity confirmation is complete. Administrators must still ensure
+the team is visible, has explicit repository write access, and that protection
+rules are active. The App receives no branch-protection bypass from this policy.
 
 See [branch protection](.github/BRANCH_PROTECTION.md) for admin activation and
 [signed provenance](.github/PROVENANCE.md) for consumer verification.

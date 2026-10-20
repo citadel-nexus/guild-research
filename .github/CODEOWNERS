@@ -12,14 +12,14 @@
 # EnumType:    ConfigDoc
 # EnumEdges:   DEPENDS_ON GOVERNANCE.md
 # DAG Node:    none
-# Intent:      Route every Research change to guildmaster review through the existing owner team.
+# Intent:      Route every Research change to guildmaster review through the confirmed owner team.
 # ───────────────────────────────────────────────────────────────
 
 # Guildmaster: Scholar (GitLab user: scholar).
-# GitHub identity mapping is pending administrator confirmation; do not assume @scholar.
-# The existing GitHub Research leads team represents the guildmaster's review ownership.
-# Admin: ensure Scholar's verified GitHub account belongs to this visible team with write access.
-* @citadel-nexus/guild-research-leads
+# Guildmaster owner: operator-confirmed GitHub team @citadel-nexus/guild-research.
+# Scholar's automation identity: scholar-research-guildmaster (GitHub App).
+# GitHub Apps cannot be code owners; review ownership belongs to the team.
+* @citadel-nexus/guild-research
 
 # Consult @citadel-nexus/sdk-core on src/index.ts changes; guild ownership still applies.
 # No narrower owner rule may bypass Research review, including this file and workflows.
