@@ -1,0 +1,762 @@
+{
+  "vectors": [
+    {
+      "type": "A",
+      "file_path": "AGENTS.md",
+      "cket_stage": "04_HYPOTHESIZE",
+      "srs_codes": [
+        "SRS-CN-RESEARCH-GOVERNANCE-001"
+      ],
+      "enum_type": "ConfigDoc",
+      "functions": [],
+      "dependencies": [
+        ".bits/queue/DISP-GOVERNANCE-research.md"
+      ],
+      "lines": 77,
+      "caps_grade": "pending",
+      "ck_stamp": "pending",
+      "intent_statement": "Constrain the authorized Research governance bootstrap to staging.",
+      "objective_id": "DISP-GOVERNANCE-research",
+      "outcome": "stored",
+      "supersedes": false,
+      "dispatch_id": "DISP-GOVERNANCE-research",
+      "seat": "BITS-CODEGEN",
+      "domain": "engineering",
+      "source_type": "seat_dispatch",
+      "tags": [
+        "DISP-GOVERNANCE-research",
+        "BITS-CODEGEN",
+        "SRS-CN-RESEARCH-GOVERNANCE-001",
+        "governance-provenance"
+      ],
+      "tenant_id": null
+    },
+    {
+      "type": "A",
+      "file_path": "CLAUDE.md",
+      "cket_stage": "04_HYPOTHESIZE",
+      "srs_codes": [
+        "SRS-CN-RESEARCH-GOVERNANCE-001"
+      ],
+      "enum_type": "Doc",
+      "functions": [],
+      "dependencies": [
+        "AGENTS.md"
+      ],
+      "lines": 37,
+      "caps_grade": "pending",
+      "ck_stamp": "pending",
+      "intent_statement": "Give IDE seats the scope and limitations of the Research bootstrap.",
+      "objective_id": "DISP-GOVERNANCE-research",
+      "outcome": "stored",
+      "supersedes": false,
+      "dispatch_id": "DISP-GOVERNANCE-research",
+      "seat": "BITS-CODEGEN",
+      "domain": "engineering",
+      "source_type": "seat_dispatch",
+      "tags": [
+        "DISP-GOVERNANCE-research",
+        "BITS-CODEGEN",
+        "SRS-CN-RESEARCH-GOVERNANCE-001",
+        "governance-provenance"
+      ],
+      "tenant_id": null
+    },
+    {
+      "type": "A",
+      "file_path": ".bits/context.md",
+      "cket_stage": "11_COMMIT",
+      "srs_codes": [
+        "SRS-CN-RESEARCH-GOVERNANCE-001"
+      ],
+      "enum_type": "ConfigDoc",
+      "functions": [],
+      "dependencies": [
+        ".bits/queue/DISP-GOVERNANCE-research.md"
+      ],
+      "lines": 39,
+      "caps_grade": "pending",
+      "ck_stamp": "pending",
+      "intent_statement": "Record the active staging scope and known build prerequisites.",
+      "objective_id": "DISP-GOVERNANCE-research",
+      "outcome": "stored",
+      "supersedes": false,
+      "dispatch_id": "DISP-GOVERNANCE-research",
+      "seat": "BITS-CODEGEN",
+      "domain": "engineering",
+      "source_type": "seat_dispatch",
+      "tags": [
+        "DISP-GOVERNANCE-research",
+        "BITS-CODEGEN",
+        "SRS-CN-RESEARCH-GOVERNANCE-001",
+        "governance-provenance"
+      ],
+      "tenant_id": null
+    },
+    {
+      "type": "A",
+      "file_path": ".bits/srs_registry.yml",
+      "cket_stage": "11_COMMIT",
+      "srs_codes": [
+        "SRS-CN-RESEARCH-GOVERNANCE-001"
+      ],
+      "enum_type": "ConfigDoc",
+      "functions": [],
+      "dependencies": [
+        ".bits/srs/SRS-CN-RESEARCH-GOVERNANCE-001.md"
+      ],
+      "lines": 56,
+      "caps_grade": "pending",
+      "ck_stamp": "pending",
+      "intent_statement": "Register the operator-authorized governance SRS without replacing existing work.",
+      "objective_id": "DISP-GOVERNANCE-research",
+      "outcome": "stored",
+      "supersedes": false,
+      "dispatch_id": "DISP-GOVERNANCE-research",
+      "seat": "BITS-CODEGEN",
+      "domain": "engineering",
+      "source_type": "seat_dispatch",
+      "tags": [
+        "DISP-GOVERNANCE-research",
+        "BITS-CODEGEN",
+        "SRS-CN-RESEARCH-GOVERNANCE-001",
+        "governance-provenance"
+      ],
+      "tenant_id": null
+    },
+    {
+      "type": "A",
+      "file_path": ".bits/srs/SRS-CN-RESEARCH-GOVERNANCE-001.md",
+      "cket_stage": "04_HYPOTHESIZE",
+      "srs_codes": [
+        "SRS-CN-RESEARCH-GOVERNANCE-001"
+      ],
+      "enum_type": "Doc",
+      "functions": [],
+      "dependencies": [
+        "GOVERNANCE.md",
+        ".github/workflows/build-provenance.yml"
+      ],
+      "lines": 63,
+      "caps_grade": "pending",
+      "ck_stamp": "pending",
+      "intent_statement": "Specify reviewable ownership and digest-bound provenance for Research artifacts.",
+      "objective_id": "DISP-GOVERNANCE-research",
+      "outcome": "stored",
+      "supersedes": false,
+      "dispatch_id": "DISP-GOVERNANCE-research",
+      "seat": "BITS-CODEGEN",
+      "domain": "engineering",
+      "source_type": "seat_dispatch",
+      "tags": [
+        "DISP-GOVERNANCE-research",
+        "BITS-CODEGEN",
+        "SRS-CN-RESEARCH-GOVERNANCE-001",
+        "governance-provenance"
+      ],
+      "tenant_id": null
+    },
+    {
+      "type": "A",
+      "file_path": ".bits/queue/DISP-GOVERNANCE-research.md",
+      "cket_stage": "11_COMMIT",
+      "srs_codes": [
+        "SRS-CN-RESEARCH-GOVERNANCE-001"
+      ],
+      "enum_type": "ConfigDoc",
+      "functions": [],
+      "dependencies": [
+        ".bits/srs/SRS-CN-RESEARCH-GOVERNANCE-001.md"
+      ],
+      "lines": 99,
+      "caps_grade": "pending",
+      "ck_stamp": "pending",
+      "intent_statement": "Record the operator directive and bounded staging tasks as a local dispatch.",
+      "objective_id": "DISP-GOVERNANCE-research",
+      "outcome": "stored",
+      "supersedes": false,
+      "dispatch_id": "DISP-GOVERNANCE-research",
+      "seat": "BITS-CODEGEN",
+      "domain": "engineering",
+      "source_type": "seat_dispatch",
+      "tags": [
+        "DISP-GOVERNANCE-research",
+        "BITS-CODEGEN",
+        "SRS-CN-RESEARCH-GOVERNANCE-001",
+        "governance-provenance"
+      ],
+      "tenant_id": null
+    },
+    {
+      "type": "A",
+      "file_path": ".github/CODEOWNERS",
+      "cket_stage": "06_PLAN",
+      "srs_codes": [
+        "SRS-CN-RESEARCH-GOVERNANCE-001"
+      ],
+      "enum_type": "ConfigDoc",
+      "functions": [],
+      "dependencies": [
+        "GOVERNANCE.md"
+      ],
+      "lines": 25,
+      "caps_grade": "pending",
+      "ck_stamp": "pending",
+      "intent_statement": "Route every Research change to guildmaster review through the confirmed owner team.",
+      "objective_id": "DISP-GOVERNANCE-research",
+      "outcome": "stored",
+      "supersedes": false,
+      "dispatch_id": "DISP-GOVERNANCE-research",
+      "seat": "BITS-CODEGEN",
+      "domain": "engineering",
+      "source_type": "seat_dispatch",
+      "tags": [
+        "DISP-GOVERNANCE-research",
+        "BITS-CODEGEN",
+        "SRS-CN-RESEARCH-GOVERNANCE-001",
+        "governance-provenance"
+      ],
+      "tenant_id": null
+    },
+    {
+      "type": "A",
+      "file_path": "GOVERNANCE.md",
+      "cket_stage": "06_PLAN",
+      "srs_codes": [
+        "SRS-CN-RESEARCH-GOVERNANCE-001"
+      ],
+      "enum_type": "Doc",
+      "functions": [],
+      "dependencies": [
+        ".github/BRANCH_PROTECTION.md",
+        ".github/PROVENANCE.md"
+      ],
+      "lines": 85,
+      "caps_grade": "pending",
+      "ck_stamp": "pending",
+      "intent_statement": "Define Research stewardship, review authority and cross-guild escalation.",
+      "objective_id": "DISP-GOVERNANCE-research",
+      "outcome": "stored",
+      "supersedes": false,
+      "dispatch_id": "DISP-GOVERNANCE-research",
+      "seat": "BITS-CODEGEN",
+      "domain": "engineering",
+      "source_type": "seat_dispatch",
+      "tags": [
+        "DISP-GOVERNANCE-research",
+        "BITS-CODEGEN",
+        "SRS-CN-RESEARCH-GOVERNANCE-001",
+        "governance-provenance"
+      ],
+      "tenant_id": null
+    },
+    {
+      "type": "A",
+      "file_path": ".github/BRANCH_PROTECTION.md",
+      "cket_stage": "06_PLAN",
+      "srs_codes": [
+        "SRS-CN-RESEARCH-GOVERNANCE-001"
+      ],
+      "enum_type": "Doc",
+      "functions": [],
+      "dependencies": [
+        ".github/CODEOWNERS",
+        ".github/workflows/build-provenance.yml"
+      ],
+      "lines": 95,
+      "caps_grade": "pending",
+      "ck_stamp": "pending",
+      "intent_statement": "Specify administrator-owned enforcement without pretending repository files apply settings.",
+      "objective_id": "DISP-GOVERNANCE-research",
+      "outcome": "stored",
+      "supersedes": false,
+      "dispatch_id": "DISP-GOVERNANCE-research",
+      "seat": "BITS-CODEGEN",
+      "domain": "engineering",
+      "source_type": "seat_dispatch",
+      "tags": [
+        "DISP-GOVERNANCE-research",
+        "BITS-CODEGEN",
+        "SRS-CN-RESEARCH-GOVERNANCE-001",
+        "governance-provenance"
+      ],
+      "tenant_id": null
+    },
+    {
+      "type": "A",
+      "file_path": ".github/workflows/build-provenance.yml",
+      "cket_stage": "11_COMMIT",
+      "srs_codes": [
+        "SRS-CN-RESEARCH-GOVERNANCE-001"
+      ],
+      "enum_type": "Workflow",
+      "functions": [],
+      "dependencies": [
+        "package.json",
+        ".bits/checks/test_governance.py"
+      ],
+      "lines": 129,
+      "caps_grade": "pending",
+      "ck_stamp": "pending",
+      "intent_statement": "Bind compiled Research archives to trusted main builds using keyless signed provenance.",
+      "objective_id": "DISP-GOVERNANCE-research",
+      "outcome": "stored",
+      "supersedes": false,
+      "dispatch_id": "DISP-GOVERNANCE-research",
+      "seat": "BITS-CODEGEN",
+      "domain": "engineering",
+      "source_type": "seat_dispatch",
+      "tags": [
+        "DISP-GOVERNANCE-research",
+        "BITS-CODEGEN",
+        "SRS-CN-RESEARCH-GOVERNANCE-001",
+        "governance-provenance"
+      ],
+      "tenant_id": null
+    },
+    {
+      "type": "A",
+      "file_path": ".github/PROVENANCE.md",
+      "cket_stage": "06_PLAN",
+      "srs_codes": [
+        "SRS-CN-RESEARCH-GOVERNANCE-001"
+      ],
+      "enum_type": "Doc",
+      "functions": [],
+      "dependencies": [
+        ".github/workflows/build-provenance.yml"
+      ],
+      "lines": 114,
+      "caps_grade": "pending",
+      "ck_stamp": "pending",
+      "intent_statement": "Let consumers verify archive integrity and trusted build identity before use.",
+      "objective_id": "DISP-GOVERNANCE-research",
+      "outcome": "stored",
+      "supersedes": false,
+      "dispatch_id": "DISP-GOVERNANCE-research",
+      "seat": "BITS-CODEGEN",
+      "domain": "engineering",
+      "source_type": "seat_dispatch",
+      "tags": [
+        "DISP-GOVERNANCE-research",
+        "BITS-CODEGEN",
+        "SRS-CN-RESEARCH-GOVERNANCE-001",
+        "governance-provenance"
+      ],
+      "tenant_id": null
+    },
+    {
+      "type": "A",
+      "file_path": ".bits/checks/test_governance.py",
+      "cket_stage": "11_COMMIT",
+      "srs_codes": [
+        "SRS-CN-RESEARCH-GOVERNANCE-001"
+      ],
+      "enum_type": "Test",
+      "functions": [
+        "load_workflow"
+      ],
+      "dependencies": [
+        ".github/workflows/build-provenance.yml",
+        ".github/CODEOWNERS",
+        ".bits/srs_registry.yml"
+      ],
+      "lines": 204,
+      "caps_grade": "pending",
+      "ck_stamp": "pending",
+      "intent_statement": "Check owner coverage and prevent PR or cross-run artifact signing regressions.",
+      "objective_id": "DISP-GOVERNANCE-research",
+      "outcome": "stored",
+      "supersedes": false,
+      "dispatch_id": "DISP-GOVERNANCE-research",
+      "seat": "BITS-CODEGEN",
+      "domain": "engineering",
+      "source_type": "seat_dispatch",
+      "tags": [
+        "DISP-GOVERNANCE-research",
+        "BITS-CODEGEN",
+        "SRS-CN-RESEARCH-GOVERNANCE-001",
+        "governance-provenance"
+      ],
+      "tenant_id": null
+    },
+    {
+      "type": "A",
+      "file_path": ".bits/out/DISP-GOVERNANCE-research/report.md",
+      "cket_stage": "11_COMMIT",
+      "srs_codes": [
+        "SRS-CN-RESEARCH-GOVERNANCE-001"
+      ],
+      "enum_type": "Doc",
+      "functions": [],
+      "dependencies": [
+        ".bits/checks/test_governance.py",
+        ".bits/out/DISP-GOVERNANCE-research/memory.json"
+      ],
+      "lines": 156,
+      "caps_grade": "pending",
+      "ck_stamp": "pending",
+      "intent_statement": "Record implementation evidence and separate pending GitHub activation from local completion.",
+      "objective_id": "DISP-GOVERNANCE-research",
+      "outcome": "stored",
+      "supersedes": false,
+      "dispatch_id": "DISP-GOVERNANCE-research",
+      "seat": "BITS-CODEGEN",
+      "domain": "engineering",
+      "source_type": "seat_dispatch",
+      "tags": [
+        "DISP-GOVERNANCE-research",
+        "BITS-CODEGEN",
+        "SRS-CN-RESEARCH-GOVERNANCE-001",
+        "governance-provenance"
+      ],
+      "tenant_id": null
+    },
+    {
+      "type": "A",
+      "file_path": ".bits/out/DISP-GOVERNANCE-research/memory.json",
+      "cket_stage": "11_COMMIT",
+      "srs_codes": [
+        "SRS-CN-RESEARCH-GOVERNANCE-001"
+      ],
+      "enum_type": "ConfigDoc",
+      "functions": [],
+      "dependencies": [
+        ".bits/out/DISP-GOVERNANCE-research/report.md"
+      ],
+      "lines": 762,
+      "caps_grade": "pending",
+      "ck_stamp": "pending",
+      "intent_statement": "Preserve file intent, governance relationships and actual validation events for dispatch ingestion.",
+      "objective_id": "DISP-GOVERNANCE-research",
+      "outcome": "stored",
+      "supersedes": false,
+      "dispatch_id": "DISP-GOVERNANCE-research",
+      "seat": "BITS-CODEGEN",
+      "domain": "engineering",
+      "source_type": "seat_dispatch",
+      "tags": [
+        "DISP-GOVERNANCE-research",
+        "BITS-CODEGEN",
+        "SRS-CN-RESEARCH-GOVERNANCE-001",
+        "governance-provenance"
+      ],
+      "tenant_id": null
+    },
+    {
+      "type": "A",
+      "file_path": ".bits/out/DISP-GOVERNANCE-research/memory.json.cgrf.yaml",
+      "cket_stage": "11_COMMIT",
+      "srs_codes": [
+        "SRS-CN-RESEARCH-GOVERNANCE-001"
+      ],
+      "enum_type": "ConfigDoc",
+      "functions": [],
+      "dependencies": [
+        ".bits/out/DISP-GOVERNANCE-research/memory.json"
+      ],
+      "lines": 31,
+      "caps_grade": "pending",
+      "ck_stamp": "pending",
+      "intent_statement": "Provide CGRF metadata for the JSON memory payload without invalid JSON comments.",
+      "objective_id": "DISP-GOVERNANCE-research",
+      "outcome": "stored",
+      "supersedes": false,
+      "dispatch_id": "DISP-GOVERNANCE-research",
+      "seat": "BITS-CODEGEN",
+      "domain": "engineering",
+      "source_type": "seat_dispatch",
+      "tags": [
+        "DISP-GOVERNANCE-research",
+        "BITS-CODEGEN",
+        "SRS-CN-RESEARCH-GOVERNANCE-001",
+        "governance-provenance"
+      ],
+      "tenant_id": null
+    },
+    {
+      "type": "B",
+      "source": "AGENTS.md",
+      "target": ".bits/queue/DISP-GOVERNANCE-research.md",
+      "edge_type": "DEPENDS_ON",
+      "weight": 1.0,
+      "description": "AGENTS.md depends_on .bits/queue/DISP-GOVERNANCE-research.md.",
+      "dispatch_id": "DISP-GOVERNANCE-research",
+      "created_by": "BITS-CODEGEN"
+    },
+    {
+      "type": "B",
+      "source": "CLAUDE.md",
+      "target": "AGENTS.md",
+      "edge_type": "DEPENDS_ON",
+      "weight": 1.0,
+      "description": "CLAUDE.md depends_on AGENTS.md.",
+      "dispatch_id": "DISP-GOVERNANCE-research",
+      "created_by": "BITS-CODEGEN"
+    },
+    {
+      "type": "B",
+      "source": ".bits/context.md",
+      "target": ".bits/queue/DISP-GOVERNANCE-research.md",
+      "edge_type": "DEPENDS_ON",
+      "weight": 1.0,
+      "description": ".bits/context.md depends_on .bits/queue/DISP-GOVERNANCE-research.md.",
+      "dispatch_id": "DISP-GOVERNANCE-research",
+      "created_by": "BITS-CODEGEN"
+    },
+    {
+      "type": "B",
+      "source": ".bits/srs_registry.yml",
+      "target": ".bits/srs/SRS-CN-RESEARCH-GOVERNANCE-001.md",
+      "edge_type": "DEPENDS_ON",
+      "weight": 1.0,
+      "description": ".bits/srs_registry.yml depends_on .bits/srs/SRS-CN-RESEARCH-GOVERNANCE-001.md.",
+      "dispatch_id": "DISP-GOVERNANCE-research",
+      "created_by": "BITS-CODEGEN"
+    },
+    {
+      "type": "B",
+      "source": ".bits/srs/SRS-CN-RESEARCH-GOVERNANCE-001.md",
+      "target": "GOVERNANCE.md",
+      "edge_type": "DEPENDS_ON",
+      "weight": 1.0,
+      "description": ".bits/srs/SRS-CN-RESEARCH-GOVERNANCE-001.md depends_on GOVERNANCE.md.",
+      "dispatch_id": "DISP-GOVERNANCE-research",
+      "created_by": "BITS-CODEGEN"
+    },
+    {
+      "type": "B",
+      "source": ".bits/srs/SRS-CN-RESEARCH-GOVERNANCE-001.md",
+      "target": ".github/workflows/build-provenance.yml",
+      "edge_type": "DEPENDS_ON",
+      "weight": 1.0,
+      "description": ".bits/srs/SRS-CN-RESEARCH-GOVERNANCE-001.md depends_on .github/workflows/build-provenance.yml.",
+      "dispatch_id": "DISP-GOVERNANCE-research",
+      "created_by": "BITS-CODEGEN"
+    },
+    {
+      "type": "B",
+      "source": ".bits/queue/DISP-GOVERNANCE-research.md",
+      "target": ".bits/srs/SRS-CN-RESEARCH-GOVERNANCE-001.md",
+      "edge_type": "DEPENDS_ON",
+      "weight": 1.0,
+      "description": ".bits/queue/DISP-GOVERNANCE-research.md depends_on .bits/srs/SRS-CN-RESEARCH-GOVERNANCE-001.md.",
+      "dispatch_id": "DISP-GOVERNANCE-research",
+      "created_by": "BITS-CODEGEN"
+    },
+    {
+      "type": "B",
+      "source": ".github/CODEOWNERS",
+      "target": "GOVERNANCE.md",
+      "edge_type": "DEPENDS_ON",
+      "weight": 1.0,
+      "description": ".github/CODEOWNERS depends_on GOVERNANCE.md.",
+      "dispatch_id": "DISP-GOVERNANCE-research",
+      "created_by": "BITS-CODEGEN"
+    },
+    {
+      "type": "B",
+      "source": "GOVERNANCE.md",
+      "target": ".github/BRANCH_PROTECTION.md",
+      "edge_type": "DEPENDS_ON",
+      "weight": 1.0,
+      "description": "GOVERNANCE.md depends_on .github/BRANCH_PROTECTION.md.",
+      "dispatch_id": "DISP-GOVERNANCE-research",
+      "created_by": "BITS-CODEGEN"
+    },
+    {
+      "type": "B",
+      "source": "GOVERNANCE.md",
+      "target": ".github/PROVENANCE.md",
+      "edge_type": "DEPENDS_ON",
+      "weight": 1.0,
+      "description": "GOVERNANCE.md depends_on .github/PROVENANCE.md.",
+      "dispatch_id": "DISP-GOVERNANCE-research",
+      "created_by": "BITS-CODEGEN"
+    },
+    {
+      "type": "B",
+      "source": ".github/BRANCH_PROTECTION.md",
+      "target": ".github/CODEOWNERS",
+      "edge_type": "DEPENDS_ON",
+      "weight": 1.0,
+      "description": ".github/BRANCH_PROTECTION.md depends_on .github/CODEOWNERS.",
+      "dispatch_id": "DISP-GOVERNANCE-research",
+      "created_by": "BITS-CODEGEN"
+    },
+    {
+      "type": "B",
+      "source": ".github/BRANCH_PROTECTION.md",
+      "target": ".github/workflows/build-provenance.yml",
+      "edge_type": "DEPENDS_ON",
+      "weight": 1.0,
+      "description": ".github/BRANCH_PROTECTION.md depends_on .github/workflows/build-provenance.yml.",
+      "dispatch_id": "DISP-GOVERNANCE-research",
+      "created_by": "BITS-CODEGEN"
+    },
+    {
+      "type": "B",
+      "source": ".github/workflows/build-provenance.yml",
+      "target": "package.json",
+      "edge_type": "DEPENDS_ON",
+      "weight": 1.0,
+      "description": ".github/workflows/build-provenance.yml depends_on package.json.",
+      "dispatch_id": "DISP-GOVERNANCE-research",
+      "created_by": "BITS-CODEGEN"
+    },
+    {
+      "type": "B",
+      "source": ".github/workflows/build-provenance.yml",
+      "target": ".bits/checks/test_governance.py",
+      "edge_type": "DEPENDS_ON",
+      "weight": 1.0,
+      "description": ".github/workflows/build-provenance.yml depends_on .bits/checks/test_governance.py.",
+      "dispatch_id": "DISP-GOVERNANCE-research",
+      "created_by": "BITS-CODEGEN"
+    },
+    {
+      "type": "B",
+      "source": ".github/PROVENANCE.md",
+      "target": ".github/workflows/build-provenance.yml",
+      "edge_type": "DEPENDS_ON",
+      "weight": 1.0,
+      "description": ".github/PROVENANCE.md depends_on .github/workflows/build-provenance.yml.",
+      "dispatch_id": "DISP-GOVERNANCE-research",
+      "created_by": "BITS-CODEGEN"
+    },
+    {
+      "type": "B",
+      "source": ".bits/checks/test_governance.py",
+      "target": ".github/workflows/build-provenance.yml",
+      "edge_type": "DEPENDS_ON",
+      "weight": 1.0,
+      "description": ".bits/checks/test_governance.py depends_on .github/workflows/build-provenance.yml.",
+      "dispatch_id": "DISP-GOVERNANCE-research",
+      "created_by": "BITS-CODEGEN"
+    },
+    {
+      "type": "B",
+      "source": ".bits/checks/test_governance.py",
+      "target": ".github/CODEOWNERS",
+      "edge_type": "DEPENDS_ON",
+      "weight": 1.0,
+      "description": ".bits/checks/test_governance.py depends_on .github/CODEOWNERS.",
+      "dispatch_id": "DISP-GOVERNANCE-research",
+      "created_by": "BITS-CODEGEN"
+    },
+    {
+      "type": "B",
+      "source": ".bits/checks/test_governance.py",
+      "target": ".bits/srs_registry.yml",
+      "edge_type": "DEPENDS_ON",
+      "weight": 1.0,
+      "description": ".bits/checks/test_governance.py depends_on .bits/srs_registry.yml.",
+      "dispatch_id": "DISP-GOVERNANCE-research",
+      "created_by": "BITS-CODEGEN"
+    },
+    {
+      "type": "B",
+      "source": ".bits/out/DISP-GOVERNANCE-research/report.md",
+      "target": ".bits/checks/test_governance.py",
+      "edge_type": "DEPENDS_ON",
+      "weight": 1.0,
+      "description": ".bits/out/DISP-GOVERNANCE-research/report.md depends_on .bits/checks/test_governance.py.",
+      "dispatch_id": "DISP-GOVERNANCE-research",
+      "created_by": "BITS-CODEGEN"
+    },
+    {
+      "type": "B",
+      "source": ".bits/out/DISP-GOVERNANCE-research/report.md",
+      "target": ".bits/out/DISP-GOVERNANCE-research/memory.json",
+      "edge_type": "DEPENDS_ON",
+      "weight": 1.0,
+      "description": ".bits/out/DISP-GOVERNANCE-research/report.md depends_on .bits/out/DISP-GOVERNANCE-research/memory.json.",
+      "dispatch_id": "DISP-GOVERNANCE-research",
+      "created_by": "BITS-CODEGEN"
+    },
+    {
+      "type": "B",
+      "source": ".bits/out/DISP-GOVERNANCE-research/memory.json",
+      "target": ".bits/out/DISP-GOVERNANCE-research/report.md",
+      "edge_type": "DEPENDS_ON",
+      "weight": 1.0,
+      "description": ".bits/out/DISP-GOVERNANCE-research/memory.json depends_on .bits/out/DISP-GOVERNANCE-research/report.md.",
+      "dispatch_id": "DISP-GOVERNANCE-research",
+      "created_by": "BITS-CODEGEN"
+    },
+    {
+      "type": "B",
+      "source": ".bits/out/DISP-GOVERNANCE-research/memory.json.cgrf.yaml",
+      "target": ".bits/out/DISP-GOVERNANCE-research/memory.json",
+      "edge_type": "DEPENDS_ON",
+      "weight": 1.0,
+      "description": ".bits/out/DISP-GOVERNANCE-research/memory.json.cgrf.yaml depends_on .bits/out/DISP-GOVERNANCE-research/memory.json.",
+      "dispatch_id": "DISP-GOVERNANCE-research",
+      "created_by": "BITS-CODEGEN"
+    },
+    {
+      "type": "C",
+      "event_type": "test_fail",
+      "file_path": "package.json",
+      "description": "Baseline npm lint, test and build failed due to missing application configuration/tooling; no application repair in this SRS.",
+      "caps_before": null,
+      "caps_after": null,
+      "dag_impact": null,
+      "dispatch_id": "DISP-GOVERNANCE-research",
+      "timestamp": "2026-10-20T17:35:39.763597+00:00",
+      "commit_sha": null,
+      "smoke_result": null
+    },
+    {
+      "type": "C",
+      "event_type": "test_pass",
+      "file_path": ".bits/checks/test_governance.py",
+      "description": "All ten governance checks passed, including forty signer-context cases and missing-output/archive fixture checks.",
+      "caps_before": null,
+      "caps_after": null,
+      "dag_impact": null,
+      "dispatch_id": "DISP-GOVERNANCE-research",
+      "timestamp": "2026-10-20T17:35:39.763597+00:00",
+      "commit_sha": null,
+      "smoke_result": "10/10"
+    },
+    {
+      "type": "C",
+      "event_type": "smoke_run",
+      "file_path": ".github/workflows/build-provenance.yml",
+      "description": "Three unsafe policy mutations were rejected; ten workflow shell steps passed syntax checks. Live GitHub/Sigstore validation remains pending.",
+      "caps_before": null,
+      "caps_after": null,
+      "dag_impact": null,
+      "dispatch_id": "DISP-GOVERNANCE-research",
+      "timestamp": "2026-10-20T17:35:39.763597+00:00",
+      "commit_sha": null,
+      "smoke_result": "10/10"
+    },
+    {
+      "type": "C",
+      "event_type": "test_pass",
+      "file_path": ".github/CODEOWNERS",
+      "description": "Operator confirmed @citadel-nexus/guild-research as guildmaster owner and scholar-research-guildmaster as Scholar automation App. Ownership, charter, protection guide and dispatch records updated; all ten governance checks passed.",
+      "caps_before": null,
+      "caps_after": null,
+      "dag_impact": null,
+      "dispatch_id": "DISP-GOVERNANCE-research",
+      "timestamp": "2026-10-20T17:39:13.687524+00:00",
+      "commit_sha": null,
+      "smoke_result": "10/10"
+    }
+  ],
+  "summary": {
+    "type_a_count": 15,
+    "type_b_count": 22,
+    "type_c_count": 4,
+    "ioo_compliance": true,
+    "dkg_orphans": 0,
+    "dispatch_id": "DISP-GOVERNANCE-research",
+    "srs_codes": [
+      "SRS-CN-RESEARCH-GOVERNANCE-001"
+    ],
+    "seat": "BITS-CODEGEN"
+  }
+}
